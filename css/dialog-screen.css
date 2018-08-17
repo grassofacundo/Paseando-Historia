@@ -1,0 +1,45 @@
+#main-container, html, body
+{
+    height: 100%;
+}
+
+#main-container{
+    position: relative;
+}
+
+.interaction-container{
+    background-color: aqua;
+}
+
+.container-character{
+    position: absolute;
+    bottom: 25%;
+}
+
+.teacher{
+    float: right;
+}
+
+.character{
+    float: left;
+}
+
+.character-image-wrapper{
+    height: 100%;
+}
+
+.background{
+    background-color: burlywood;
+}
+
+.dialogue{
+    margin: auto;
+}
+
+.container-dialogue{
+    text-align: center;
+    bottom: 5%;
+    background-color: aquamarine;
+    position: absolute;
+    height: 20%;
+}
