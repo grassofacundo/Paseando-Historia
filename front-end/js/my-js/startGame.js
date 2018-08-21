@@ -1,6 +1,5 @@
 function startArg1810()
 	{
-		window.location.href = "dialog-screen.html";
 		var xmlhttp = new XMLHttpRequest();
 		xmlhttp.onreadystatechange = function()
 		{
@@ -15,6 +14,8 @@ function startArg1810()
 	}
 
 function prepareScreen(elements){
+	var button = document.getElementsById("start1810");
+	button.style.visibility = false;
 	var image = document.getElementsById("speaking-character");
 	image.src = "../front-end/Images/" + elements[0];
 	var dialogue = document.getElementsById("dialogue").innerHTML=elements[1];
