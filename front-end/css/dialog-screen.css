@@ -6,6 +6,9 @@
 #main-container{
     position: relative;
     border-style: solid;
+    visibility: hidden;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .interaction-container{
@@ -13,6 +16,11 @@
     height: 60%;
     position: absolute;
     bottom: 5%;
+    width: 100%;
+}
+
+.hasPointer:hover{
+    cursor: pointer;
 }
 
 .container-character{
@@ -30,6 +38,7 @@
     background-color: aquamarine;
     height: 40%;
     border-style: solid;
+    position: relative;
 }
 
 .teacher{
@@ -48,11 +57,29 @@
     height: 100%;
 }
 
-.background{
-    background-color: burlywood;
+#background{
+    background-color: black;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .dialogue{
     margin: auto;
+}
+
+.clickToNext{
+    height: 20%;
+    position: absolute;
+    right: 2%;
+    bottom: 10%;
+}
+
+.option-button {
+    height: 50%;
+    border: none;
+    background-color: tomato;
+    margin-left: 0.25%;
+    margin-right: 0.25%;
 }
 
