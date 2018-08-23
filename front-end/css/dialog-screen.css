@@ -5,15 +5,13 @@
 
 #main-container{
     position: relative;
-    border-style: solid;
     visibility: hidden;
     padding-left: 0px;
     padding-right: 0px;
 }
 
 .interaction-container{
-    border-style: solid;
-    height: 60%;
+    height: 75%;
     position: absolute;
     bottom: 5%;
     width: 100%;
@@ -25,19 +23,17 @@
 
 .container-character{
     max-width: 90%;
-    height: 60%;
+    height: 45%;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    border-style: solid;
 }
 
 .container-dialogue{
     text-align: center;
     display: block;
-    background-color: aquamarine;
-    height: 40%;
-    border-style: solid;
+    background-color: rgb(184, 73, 15, 0.6);
+    height: 55%;
     position: relative;
 }
 
@@ -45,12 +41,27 @@
     float: right;
     height: 100%;
     max-width: 50%;
+    visibility: hidden;
 }
 
 .character{
     float: left;
     height: 100%;
     max-width: 50%;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 55%;
+    left: 0%;
+    background-color: rgb(184, 73, 15, 0.6);
+    text-align: center;
+}
+
+.speaker-name {
+    color: white;
+    margin-bottom: auto;
+    margin-top: auto;
 }
 
 .character-image-wrapper{
@@ -66,6 +77,9 @@
 
 .dialogue{
     margin: auto;
+    font-size: 20px;
+    color: white;
+    display: inline-block;
 }
 
 .clickToNext{
@@ -81,5 +95,12 @@
     background-color: tomato;
     margin-left: 0.25%;
     margin-right: 0.25%;
+    box-sizing: content-box;
+    width: 30%;
+}
+
+.teacher-help {
+    float: right;
+    color: cyan;
 }
 

@@ -8,24 +8,17 @@
         <link rel="stylesheet" type="text/css" media="screen" href="../front-end/css/bootstrap/bootstrap.css" />
         <script src="../front-end/js/my-js/manageGame.js"></script>
     </head>
-    <body class="body" id="background">
-        <select id="startGame" onchange="startChapter(this.value)">
-            <option value="" selected disabled>Choose here</option>
-            <option value="arg1810">Revolución de Mayo de 1810</option>
-            <option value="sarasa" disabled>No todavía</option>
-            <option value="sarasa" disabled>No todavía</option>
-            <option value="sarasa" disabled >No todavía</option>
-        </select>
+    <body class="body" id="background" onload="startChapter('intro')">
         <div id="main-container" class="container">
             <div class="interaction-container">
                 <div class="container-character">
                     <img id="speaking-character" alt="Speaking character" class="character-image character">
-                    <img src="../front-end/Images/teacher.png" alt="Teacher"class="character-image teacher">
+                    <div class="bottom-left">
+                        <p class="speaker-name" id="character-name"></p>
+                    </div>
+                    <img src="../front-end/Images/teacher.png" alt="Teacher" id="teacher" class="character-image teacher">
                 </div>
                 <div id="dialogue-area" class="container-dialogue">
-                    <input type="button" value="sarasa,sarasa,sarasa">
-                    <input type="button" value="sarasa,sarasa,sarasa">
-                    <input type="button" value="sarasa,sarasa,sarasa">
                 </div>
             </div>
         </div>

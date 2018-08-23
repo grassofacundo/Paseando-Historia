@@ -21,11 +21,17 @@ require_once "../screen-class/screen.php";
         public function getCharacter() {
             return $this->screen->getCharacter();
         }
+        public function getCharacterName() {
+            return $this->screen->getCharacterName();
+        }
         public function getBackground() {
             return $this->screen->getBackground();
         }
         public function getAnswers() {
             return $this->screen->getAnswers();
+        }
+        public function getHelp() {
+            return $this->screen->getHelp();
         }
     }
 
