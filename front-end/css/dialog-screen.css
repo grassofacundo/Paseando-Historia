@@ -77,9 +77,21 @@
 
 .dialogue{
     margin: auto;
-    font-size: 20px;
     color: white;
     display: inline-block;
+    font-size: 10px;
+}
+  
+@media (min-width: 768px) {
+    .dialogue {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .dialogue {
+        font-size: 20px;
+    }
 }
 
 .clickToNext{

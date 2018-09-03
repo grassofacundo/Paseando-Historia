@@ -1,5 +1,5 @@
 <?php
-function arg1810(){
+function arg1810($screenNum){
     switch((int)$screenNum){
         case 1:
             $screenType = "dialogue";

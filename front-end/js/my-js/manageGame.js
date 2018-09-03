@@ -1,9 +1,3 @@
-function startChapter(chapterCode) 
-{
-	type = "chapterCode";
-	doAjax(type, chapterCode);
-}
-
 function next(){
 	type = "next";
 	doAjax(type, " ");
@@ -28,8 +22,10 @@ function doAjax(type, infoToSend) {
 			prepareScreen(elements);
 		}
 	};
-	xmlhttp.open("GET", "../history/chapters-class/nextScreen.php?type=" + type + "&info=" + infoToSend, true);
-	xmlhttp.send();
+	xmlhttp.open("POST", "/Paseando-Historia/Paseando-Historia/history/chapters-class/nextScreen.php");
+	xmlhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+	//C:\wamp64\www\Paseando-Historia\Paseando-Historia\history\chapters-class\nextScreen.php
+	xmlhttp.send("type=" + type + "&info=" + infoToSend);
 }
 
 function prepareScreen(elements){
