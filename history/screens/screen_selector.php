@@ -16,7 +16,7 @@ include "arg1810.php";
                 $dialogue = "Nos quedamos sin diálogos";
                 $background = "error404.png";
 
-                $elements = array($isQuestion = false, $character, $characterName, $dialogue, $background);
+                $elements = array($screenType = "dialogue", $character, $characterName, $dialogue, $background);
             break;
         }
         return ($elements);

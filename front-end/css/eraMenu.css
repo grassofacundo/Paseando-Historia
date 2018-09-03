@@ -1,0 +1,24 @@
+.eraMenuBody {
+    /*
+    background-image: url(../Images/background/biblioteca-vacia.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    */
+    background-color: black;
+}
+
+.selectable-object {
+    width: 50px;
+    margin: 5px;
+    display: inline-block;
+}
+
+.selectable-object:hover {
+    border: solid;
+    border-color: yellow;
+}
+
+.gray {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}

@@ -1,19 +1,34 @@
-function codeAddress() {
-	alert('ok');
-}
-
 function startChapter(chapterCode) 
 {
+	type = "chapterCode";
+	doAjax(type, chapterCode);
+}
+
+function next(){
+	type = "next";
+	doAjax(type, " ");
+}
+
+function checkAnswer(answer) {
+	type= "answer";
+	doAjax(type, answer.children["0"].innerHTML);
+}
+
+function doAjax(type, infoToSend) {
 	var xmlhttp = new XMLHttpRequest();
 	xmlhttp.onreadystatechange = function()
 	{
 		if (this.readyState == 4 && this.status == 200)
 		{
 			var elements = JSON.parse(this.responseText);
+			if (elements[0] == "finished") {
+				window.location.href = "eraMenu.html";
+				//C:\wamp64\www\Paseando-Historia\Paseando-Historia\HTML\eraMenu.html
+			}
 			prepareScreen(elements);
 		}
 	};
-	xmlhttp.open("GET", "../history/chapters-class/startChapter.php?name=" + chapterCode + "&currentScreen=" + 01, true);
+	xmlhttp.open("GET", "../history/chapters-class/nextScreen.php?type=" + type + "&info=" + infoToSend, true);
 	xmlhttp.send();
 }
 
@@ -28,17 +43,17 @@ function prepareScreen(elements){
 	dialogueArea.classList.remove("hasPointer");
 	document.getElementById("teacher").style.visibility = "hidden";
 	
-	if (elements[5] == null){
+	if (elements[0] == "dialogue"){
 		createDialogue();
 		createNextIcon();
-	} else {
+	} else if (elements[0] == "question") {
 		createQuestion(elements);
 	}
 
-	document.getElementById("speaking-character").src = "../front-end/Images/" + elements[0];
-	document.getElementById("character-name").innerHTML=elements[1];
-	document.getElementById("dialogue").innerHTML=elements[2];
-	document.getElementById("background").style.backgroundImage = "url(../front-end/Images/background/" + elements[3] + ")";
+	document.getElementById("speaking-character").src = "../front-end/Images/" + elements[1];
+	document.getElementById("character-name").innerHTML=elements[2];
+	document.getElementById("dialogue").innerHTML=elements[3];
+	document.getElementById("background").style.backgroundImage = "url(../front-end/Images/background/" + elements[4] + ")";
 	document.getElementById("main-container").style.visibility = "visible";
 }
 
@@ -69,12 +84,12 @@ function createNextIcon() {
 }
 
 function createQuestion(elements){
-	if (elements[4]) {
+	if (elements[5]) {
 		//create dialogue text
 		var help = document.createElement("p");
 		help.setAttribute("class", "teacher-help");
 		dialogueArea.appendChild(help);
-		help.innerHTML=elements[4];
+		help.innerHTML=elements[5];
 		document.getElementById("teacher").style.visibility = "visible";
 	}
 	createDialogue();
@@ -96,40 +111,12 @@ function createQuestion(elements){
 	var option1 = document.createElement("p");
 	var option2 = document.createElement("p");
 	var option3 = document.createElement("p");
-	option1.innerHTML=elements[5][0];
-	option2.innerHTML=elements[5][1];
-	option3.innerHTML=elements[5][2];
+	option1.innerHTML=elements[6][0];
+	option2.innerHTML=elements[6][1];
+	option3.innerHTML=elements[6][2];
 
 	button1.appendChild(option1);
 	button2.appendChild(option2);
 	button3.appendChild(option3);
 }
 
-function next(){
-
-	var xmlhttp = new XMLHttpRequest();
-	xmlhttp.onreadystatechange = function()
-	{
-		if (this.readyState == 4 && this.status == 200)
-		{
-			var elements = JSON.parse(this.responseText);
-			prepareScreen(elements);
-		}
-	};
-	xmlhttp.open("GET", "../history/chapters-class/nextScreen.php?", true);
-	xmlhttp.send();
-}
-
-function checkAnswer(answer) {
-	var xmlhttp = new XMLHttpRequest();
-	xmlhttp.onreadystatechange = function()
-	{
-		if (this.readyState == 4 && this.status == 200)
-		{
-			var elements = JSON.parse(this.responseText);
-			prepareScreen(elements);
-		}
-	};
-	xmlhttp.open("GET", "../history/chapters-class/nextScreen.php?answer=" + answer.children["0"].innerHTML, true);
-	xmlhttp.send();
-}

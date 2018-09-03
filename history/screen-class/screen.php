@@ -14,18 +14,18 @@ include '../screens/screen_selector.php';
         public function getHelp() {return $this->help;}
         private $answers = array();
         public function getAnswers() {return $this->answers;}
+        private $screenType;
+        public function getScreenType() {return $this->screenType;}
 
-        public function __construct($chapterCode, $currentScreen, $isQuestion = false)
+        public function __construct($chapterCode, $currentScreen)
         {
             $elements = getScreenElements($chapterCode, $currentScreen);
-            if ($finished) {
-                return $finished;
-            }
+            $this->screenType = $elements[0];
             $this->character = $elements[1];
             $this->characterName = $elements[2];
             $this->dialogue = $elements[3];
             $this->background = $elements[4];
-            if ($elements[0]) {
+            if ($this->screenType == "question") {
                 $this->help = $elements[5];
                 $_SESSION["rightAnswer"] = $elements[6];
                 $wrongAnswers = array($elements[7], $elements[8], $elements[9], $elements[10]);

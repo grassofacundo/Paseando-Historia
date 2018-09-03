@@ -8,12 +8,14 @@ require_once "../screen-class/screen.php";
         private $chapterCode;
             function getChapterCode(){return $this->chapterCode;}
             function setChapterCode($chapterCode){$this->chapterCode = $chapterCode;}
-            private $isCompleted;
 
-        public function __construct($chapterCode, $currentScreen, $isQuestion = false)
+        public function __construct($chapterCode, $currentScreen)
         {
             $this->chapterCode = $chapterCode;
-            $this->screen = new screen($chapterCode, $currentScreen, $isQuestion);
+            $this->screen = new screen($chapterCode, $currentScreen);
+        }
+        public function getScreenType(){
+            return $this->screen->getScreenType();
         }
         public function getDialogue(){
             return $this->screen->getDialogue();
