@@ -8,6 +8,8 @@ include '../screens/screen_selector.php';
         public function getCharacterName() {return $this->characterName;}
         private $background;
         public function getBackground() {return $this->background;}
+        private $backgroundColor;
+        public function getBackgroundColor() {return $this->backgroundColor;}
         private $dialogue;
         public function getDialogue() {return $this->dialogue;}
         private $help;
@@ -25,14 +27,23 @@ include '../screens/screen_selector.php';
             $this->characterName = $elements[2];
             $this->dialogue = $elements[3];
             $this->background = $elements[4];
+            $this->backgroundColor = $elements[5];
             if ($this->screenType == "question") {
-                $this->help = $elements[5];
-                $_SESSION["rightAnswer"] = $elements[6];
-                $wrongAnswers = array($elements[7], $elements[8], $elements[9], $elements[10]);
-                shuffle($wrongAnswers);
-                $this->answers = array($_SESSION["rightAnswer"], $wrongAnswers[0], $wrongAnswers[1]);
-                shuffle($this->answers);
+                manageQuestion($elements);
             }
+        }
+
+        public function manageQuestion($elements) {
+            $rightGroup = array($elements[6], $elements[7]);
+            $falseGroup1 = array($elements[8], $elements[9]);
+            $falseGroup2 = array($elements[19], $elements[11]);
+            $falseGroup3 = array($elements[12], $elements[13]);
+            $falseGroup4 = array($elements[14], $elements[15]);
+            $_SESSION["rightAnswer"] = $elements[6];
+            $wrongGroups = array($falseGroup1, $falseGroup2, $falseGroup3, $falseGroup4);
+            shuffle($wrongAnswers);
+            $this->answers = array($rightGroup, $wrongAnswers[0], $wrongAnswers[1]);
+            shuffle($this->answers);
         }
     }
 ?>

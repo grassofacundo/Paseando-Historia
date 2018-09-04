@@ -23,12 +23,12 @@
     $character = $chapter->getCharacter();
     $characterName = $chapter->getCharacterName();
     $background = $chapter->getBackground();
-    $elements = array($screenType, $character, $characterName, $dialogue, $background);
-    $help = ($needsHelp ? $chapter->getHelp() : false);
+    $backgroundColor = $chapter->getBackgroundColor();
+    $elements = array($screenType, $character, $characterName, $dialogue, $background, $backgroundColor);
     $answers = $chapter->getAnswers();
 
     if (count($answers) > 0) {
-        array_push($elements, $help, $answers);
+        array_push($elements, $needsHelp, $answers);
     }
 
     echo json_encode($elements);

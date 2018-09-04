@@ -21,12 +21,16 @@ function intro($screenNum){
             $characterName = "Profe historia";
             $dialogue = "A todo esto ¿Ustedes están en clase de Historia no?";
             $background = "biblioteca.jpg";
-            $help = "Esto no debería aparecer";
             $rightOption = "Sí señora";
+            $rightHelp = "Esto no debería aparecer";
             $falseOption1 = "Sí";
-            $falseOption2 = "Lamentablemente...";
+            $falseHelp1 = "Falsa ayuda 1";
+            $falseOption2 = "Exacto";
+            $falseHelp2 = "Falsa ayuda 2";
             $falseOption3 = "Sep";
+            $falseHelp3 = "Falsa ayuda 3";
             $falseOption4 = "Sa";
+            $falseHelp4 = "Falsa ayuda 4";
         break;
         case 4:
             $screenType = "dialogue";
@@ -92,7 +96,7 @@ function intro($screenNum){
     }
     $elements = array($screenType, $character, $characterName, $dialogue, $background);
     if ($screenType == "question") {
-        array_push($elements,$help, $rightOption, $falseOption1, $falseOption2, $falseOption3, $falseOption4);
+        array_push($elements, $rightOption, $rightHelp, $falseOption1, $falseHelp1, $falseOption2, $falseHelp2, $falseOption3, $falseHelp3, $falseOption4, $falseHelp4);
     }
     return ($elements);
 }

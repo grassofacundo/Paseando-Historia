@@ -29,6 +29,9 @@ require_once "../screen-class/screen.php";
         public function getBackground() {
             return $this->screen->getBackground();
         }
+        public function getBackgroundColor() {
+            return $this->screen->getBackgroundColor();
+        }
         public function getAnswers() {
             return $this->screen->getAnswers();
         }

@@ -32,9 +32,13 @@
 .container-dialogue{
     text-align: center;
     display: block;
-    background-color: rgb(184, 73, 15, 0.6);
+    background-color: rgba(0, 0, 0, 0);
     height: 55%;
     position: relative;
+}
+
+.container-dialogue-teacher {
+    background-color: rgba(2, 136, 209, 0.6);
 }
 
 .teacher{

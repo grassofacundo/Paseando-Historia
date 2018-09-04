@@ -30,17 +30,10 @@ function doAjax(type, infoToSend) {
 
 function prepareScreen(elements){
 
-	//Clean dialogue area
-	dialogueArea = document.getElementById("dialogue-area");
-	while (dialogueArea.firstChild) {
-		dialogueArea.removeChild(dialogueArea.firstChild);
-	}
-	dialogueArea.removeAttribute("onclick");
-	dialogueArea.classList.remove("hasPointer");
-	document.getElementById("teacher").style.visibility = "hidden";
+	cleanDialogue();
 	
 	if (elements[0] == "dialogue"){
-		createDialogue();
+		createDialogue(elements[6], elements[5]);
 		createNextIcon();
 	} else if (elements[0] == "question") {
 		createQuestion(elements);
@@ -53,10 +46,30 @@ function prepareScreen(elements){
 	document.getElementById("main-container").style.visibility = "visible";
 }
 
-function createDialogue(){
+function cleanDialogue() {
+	//Clean dialogue area
+	dialogueArea = document.getElementById("dialogue-area");
+	while (dialogueArea.firstChild) {
+		dialogueArea.removeChild(dialogueArea.firstChild);
+	}
+	dialogueArea.removeAttribute("onclick");
+	dialogueArea.classList.remove("hasPointer");
+	document.getElementById("teacher").style.visibility = "hidden";
+}
+
+function createDialogue(isTeacher, backgroundColor){
+	dialogueArea = document.getElementById("dialogue-area");
+
 	//create dialogue div
 	var div = document.createElement("div");
 	div.setAttribute("class", "dialogue col-11");
+
+	if (isTeacher) {
+		dialogueArea.style.backgroundColor = "rgba(2, 136, 209, 0.6)";
+	} else {
+		dialogueArea.style.backgroundColor = "'" + backgroundColor + "'";
+	}
+
 	//create dialogue text
 	var dialogue = document.createElement("p");
 	dialogue.setAttribute("id", "dialogue");
@@ -80,14 +93,6 @@ function createNextIcon() {
 }
 
 function createQuestion(elements){
-	if (elements[5]) {
-		//create dialogue text
-		var help = document.createElement("p");
-		help.setAttribute("class", "teacher-help");
-		dialogueArea.appendChild(help);
-		help.innerHTML=elements[5];
-		document.getElementById("teacher").style.visibility = "visible";
-	}
 	createDialogue();
 	//create buttons
 	var button1 = document.createElement("button");
@@ -96,9 +101,9 @@ function createQuestion(elements){
 	button1.setAttribute("class", "dialogue option-button hasPointer"); //col-3
 	button2.setAttribute("class", "dialogue option-button hasPointer"); //col-3
 	button3.setAttribute("class", "dialogue option-button hasPointer"); //col-3
-	button1.setAttribute("onclick", "checkAnswer(this)");
-	button2.setAttribute("onclick", "checkAnswer(this)");
-	button3.setAttribute("onclick", "checkAnswer(this)");
+	button1.setAttribute("onclick", "showHelp(this)");
+	button2.setAttribute("onclick", "showHelp(this)");
+	button3.setAttribute("onclick", "showHelp(this)");
  
 	dialogueArea.appendChild(button1);
 	dialogueArea.appendChild(button2);
@@ -114,5 +119,18 @@ function createQuestion(elements){
 	button1.appendChild(option1);
 	button2.appendChild(option2);
 	button3.appendChild(option3);
+}
+
+function showHelp() {
+
+	cleanDialogue();
+	createDialogue();
+
+	//create dialogue text
+	var help = document.createElement("p");
+	help.setAttribute("class", "teacher-help");
+	dialogueArea.appendChild(help);
+	help.innerHTML=elements[5];
+	document.getElementById("teacher").style.visibility = "visible";
 }
 
