@@ -21,12 +21,16 @@ function arg1810($screenNum){
             $characterName = "Nicolás Rodriguez Peña";
             $dialogue = "¿Me podría nombrar a 3 integrantes de la reunión de hoy?";
             $background = "casa_pena_afuera.jpg";
-            $help = "Este es mi diálogo de ayuda";
             $rightOption = "Castelli, Belgrano y Paso";
-            $falseOption1 = "Melchor, Gaspar y Baltazar";
-            $falseOption2 = "Mou, Larry, Curly";
-            $falseOption3 = "Rick, Morty, Summer";
-            $falseOption4 = "Francella, Maradona, Ricky Fort";
+            $rightHelp = "Claro! Junto a otros más!";
+            $falseOption1 = "Saavedra y Mitre";
+            $falseHelp1 = "La pregunta dice 3...";
+            $falseOption2 = "Viamonte, San Martín y Rosas";
+            $falseHelp2 = "No son de la misma época";
+            $falseOption3 = "Rivadavia, su hermano y su hijo";
+            $falseHelp3 = "No, nada que ver";
+            $falseOption4 = "Los K";
+            $falseHelp4 = "#NoVuelvenMas";
         break;
         case 4:
             $screenType = "dialogue";
@@ -79,7 +83,7 @@ function arg1810($screenNum){
     $backgroundColor = "rgb(184, 73, 15, 0.6)";
     $elements = array($screenType, $character, $characterName, $dialogue, $background, $backgroundColor);
     if ($screenType == "question") {
-        array_push($elements,$help, $rightOption, $falseOption1, $falseOption2, $falseOption3, $falseOption4);
+        array_push($elements, $rightOption, $rightHelp, $falseOption1, $falseHelp1, $falseOption2, $falseHelp2, $falseOption3, $falseHelp3, $falseOption4, $falseHelp4);
     }
     return ($elements);
 }
