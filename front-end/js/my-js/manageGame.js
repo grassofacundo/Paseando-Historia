@@ -17,14 +17,12 @@ function doAjax(type, infoToSend) {
 			var elements = JSON.parse(this.responseText);
 			if (elements[0] == "finished") {
 				window.location.href = "eraMenu.html";
-				//C:\wamp64\www\Paseando-Historia\Paseando-Historia\HTML\eraMenu.html
 			}
 			prepareScreen(elements);
 		}
 	};
-	xmlhttp.open("POST", "/Paseando-Historia/Paseando-Historia/history/chapters-class/nextScreen.php");
+	xmlhttp.open("POST", "/history/chapters-class/nextScreen.php");
 	xmlhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-	//C:\wamp64\www\Paseando-Historia\Paseando-Historia\history\chapters-class\nextScreen.php
 	xmlhttp.send("type=" + type + "&info=" + infoToSend);
 }
 
