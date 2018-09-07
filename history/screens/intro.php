@@ -45,12 +45,16 @@ function intro($screenNum){
             $characterName = "Profe historia";
             $dialogue = " ";
             $background = "libro-magico.jpg";
-            $help = "Esto no debería aparecer";
             $rightOption = "WOW";
+            $rightHelp = "Esto no debería aparecer";
             $falseOption1 = "ZARPADO";
-            $falseOption2 = "INCREÍBLE";
-            $falseOption3 = "FAAAA";
-            $falseOption4 = "TREMENDO!";
+            $falseHelp1 = "Falsa ayuda 1";
+            $falseOption2 = "INCREIBLE";
+            $falseHelp2 = "Falsa ayuda 2";
+            $falseOption3 = "TREMENDO";
+            $falseHelp3 = "Falsa ayuda 3";
+            $falseOption4 = "FAAAAA";
+            $falseHelp4 = "Falsa ayuda 4";
         break;
         case 6:
             $screenType = "dialogue";
@@ -94,6 +98,7 @@ function intro($screenNum){
             $dialogue = "Nos quedamos sin diálogos";
             $background = "error404.png";
     }
+    $backgroundColor = "rgb(40, 167, 69, 0.6)";
     $elements = array($screenType, $character, $characterName, $dialogue, $background, $backgroundColor);
     if ($screenType == "question") {
         array_push($elements, $rightOption, $rightHelp, $falseOption1, $falseHelp1, $falseOption2, $falseHelp2, $falseOption3, $falseHelp3, $falseOption4, $falseHelp4);

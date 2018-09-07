@@ -54,7 +54,15 @@
     max-width: 50%;
 }
 
-.bottom-left {
+.fullBrightness {
+    filter: brightness(100%);
+}
+
+.quarterBrightness {
+    filter: brightness(25%);
+}
+
+#bottom-left {
     position: absolute;
     bottom: 55%;
     left: 0%;

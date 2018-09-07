@@ -29,8 +29,8 @@ function arg1810($screenNum){
             $falseHelp2 = "No son de la misma época";
             $falseOption3 = "Rivadavia, su hermano y su hijo";
             $falseHelp3 = "No, nada que ver";
-            $falseOption4 = "Los K";
-            $falseHelp4 = "#NoVuelvenMas";
+            $falseOption4 = "Donald Trump";
+            $falseHelp4 = "#FueraYankeesDeIrak";
         break;
         case 4:
             $screenType = "dialogue";
@@ -59,12 +59,16 @@ function arg1810($screenNum){
             $characterName = "Manuel Belgrano";
             $dialogue = "¿Está al tanto de lo que pasó en España?";
             $background = "Casa_de_Pena.jpg";
-            $help = "Este es mi diálogo de ayuda";
             $rightOption = "Sí, la toma de Sevilla y la caída de la junta";
-            $falseOption1 = "Sí, el que depositó pesos recibirá pesos";
-            $falseOption2 = "Sí, el gobierno intergaláctico nos declaró la guerra";
-            $falseOption3 = "Sí, Voldemort tomó la Bastilla";
-            $falseOption4 = "Qué sé yo estoy re loco";
+            $rightHelp = "Exacto, eso queda en España";
+            $falseOption1 = "Cosas locas";
+            $falseHelp1 = "No tiene sentido eso";
+            $falseOption2 = "ESTA OPCIÓN ES FALSA";
+            $falseHelp2 = "Claramente...";
+            $falseOption3 = "La revolucoón rusa";
+            $falseHelp3 = "Seguí participando Lenin";
+            $falseOption4 = "La entrega de los oscars";
+            $falseHelp4 = "Que gane Di Caprio!";
         break;
         case 8:
             $screenType = "dialogue";
@@ -72,6 +76,20 @@ function arg1810($screenNum){
             $characterName = "Manuel Belgrano";
             $dialogue = "Exacto! La caída de la junta de Sevilla es un factor clave para que pensemos en una revolución. Aunque también nos inspira la revolución francesa, o la independencia de EEUU, son hechos de hace algunos años que nos permiten pensar en un país con más libertad.";
             $background = "Casa_de_Pena.jpg";
+        break;
+        case 9:
+            $screenType = "dialogue";
+            $character = "belgrano.jpg";
+            $characterName = "Manuel Belgrano";
+            $dialogue = "No tengo mucho más para decir, hacé click para terminar";
+            $background = "Casa_de_Pena.jpg";
+        break;
+        case 10:
+            $screenType = "finished";
+            $character = " ";
+            $characterName = " ";
+            $dialogue = " ";
+            $background = " ";
         break;
         default:
             $screenType = "dialogue";
