@@ -61,9 +61,16 @@ function createQuestion(){
 	button1.setAttribute("class", "dialogue option-button hasPointer"); //col-3
 	button2.setAttribute("class", "dialogue option-button hasPointer"); //col-3
 	button3.setAttribute("class", "dialogue option-button hasPointer"); //col-3
-	button1.setAttribute("onclick", "showHelp(this,'" + elements[7][0][1] + "')");
-	button2.setAttribute("onclick", "showHelp(this,'" + elements[7][1][1] + "')");
-	button3.setAttribute("onclick", "showHelp(this,'" + elements[7][2][1] + "')");
+	//Hack para que no haya screen de ayuda en la intro
+	if (elements[2] == "Profe historia") {
+		button1.setAttribute("onclick", "next()");
+		button2.setAttribute("onclick", "next()");
+		button3.setAttribute("onclick", "next()");
+	} else {
+		button1.setAttribute("onclick", "showHelp(this,'" + elements[7][0][1] + "')");
+		button2.setAttribute("onclick", "showHelp(this,'" + elements[7][1][1] + "')");
+		button3.setAttribute("onclick", "showHelp(this,'" + elements[7][2][1] + "')");
+	}
  
 	dialogueArea.appendChild(button1);
 	dialogueArea.appendChild(button2);
@@ -93,7 +100,8 @@ function showHelp(answer, helpText) {
 	answer = answer.children["0"].innerHTML;
 	document.getElementById("teacher").style.visibility = "visible";
 	event.stopPropagation();
-	createDialogue(answer)
+	createDialogue(answer);
+	createDialogue();
 }
 
 function createDialogue(answer){
