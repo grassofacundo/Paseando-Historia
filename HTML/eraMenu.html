@@ -5,13 +5,52 @@
         <title>Paseando historia</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" media="screen" href="../front-end/css/eraMenu.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="../front-end/css/modalEX.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="../front-end/css/index.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="../front-end/css/bootstrap/bootstrap.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="../front-end/css/bootstrap/bootstrap.css" />
         <script src="../front-end/js/my-js/index.js"></script>
+        <script src="../front-end/js/my-js/modalEX.js"></script>
     </head>
-    <body class="body eraMenuBody">
-        <div class="container">
-            <img src="../front-end/Images/objects/mate.png" class="selectable-object" alt="Mate" onclick="startChapter('arg1810')">
-            <img src="../front-end/Images/objects/clock.jpg" class="selectable-object" alt="Mate" onclick="startChapter('test01')">
+    <body class="index-body">
+        <div class="container menu-container">
+            <div class="menu-object-wrapper">
+                <div class="selectable-object-container">
+                    <div class="selectable-object-wrapper">
+                        <img src="../front-end/Images/objects/escarapela.png" class="selectable-object" alt="Mate" onclick="startChapter('arg1810')">
+                        <p class="progress-text completed-full">Completado 100%</p>
+                    </div>
+                    <div class="selectable-object-wrapper">
+                        <img src="../front-end/Images/objects/clock.jpg" class="selectable-object gray" alt="Mate" onclick="startChapter('test01')">
+                        <p class="progress-text completed-none">Completado 0%</p>
+                    </div>
+                    <div class="selectable-object-wrapper">
+                        <img src="../front-end/Images/objects/mate.png" class="selectable-object one" alt="Mate" onclick="startChapter('arg1810')">
+                        <p class="progress-text completed-one">Completado 33%</p>
+                    </div>
+                    <div class="selectable-object-wrapper">
+                        <img src="../front-end/Images/objects/mate.png" class="selectable-object" alt="Mate" onclick="startChapter('arg1810')">
+                        <p class="progress-text completed-two">Completado 66%</p>
+                    </div>
+                    <div class="selectable-object-wrapper">
+                        <img src="../front-end/Images/objects/mate.png" class="selectable-object gray" alt="Mate" onclick="startChapter('arg1810')">
+                        <p class="progress-text completed-none">Completado 0%</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Trigger/Open The Modal -->
+            <button id="myBtn">Open Modal</button>
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Some text in the Modal..</p>
+            </div>
+
+            </div>
         </div>
     </body>
 </html>

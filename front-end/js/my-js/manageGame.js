@@ -40,8 +40,8 @@ function prepareScreen(){
 	document.getElementById("speaking-character").classList.remove("quarterBrightness");
 	document.getElementById("background").style.backgroundImage = "url(../front-end/Images/background/" + elements[4] + ")";
 	document.getElementById("main-container").style.visibility = "visible";
-	
-	
+
+
 	if (elements[0] == "question") {
 		createQuestion();
 	} else if (elements[0] == "dialogue"){
@@ -71,7 +71,7 @@ function createQuestion(){
 		button2.setAttribute("onclick", "showHelp(this,'" + elements[7][1][1] + "')");
 		button3.setAttribute("onclick", "showHelp(this,'" + elements[7][2][1] + "')");
 	}
- 
+
 	dialogueArea.appendChild(button1);
 	dialogueArea.appendChild(button2);
 	dialogueArea.appendChild(button3);
@@ -101,7 +101,6 @@ function showHelp(answer, helpText) {
 	document.getElementById("teacher").style.visibility = "visible";
 	event.stopPropagation();
 	createDialogue(answer);
-	createDialogue();
 }
 
 function createDialogue(answer){
