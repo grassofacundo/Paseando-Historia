@@ -59,6 +59,44 @@ html, body {
     filter: linear-gradient(to right, blue 50%, yellow 50%)
 }
 
+.modal-container{
+    opacity:0.8;
+    background-color:#000;
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    z-index:1000;
+    display: block;
+}
+.modal-background{
+    background-color: white;
+    position: fixed;
+    width: 70%;
+    height: 70%;
+    top: 5%;
+    left: 15%;
+    z-index: 1001;
+    display: block;
+}
+
+.characters-wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.simple-character-wrapper {
+    width: 10%;
+    height: 10%;
+    background-color: red;
+}
+
 @media (min-width: 768px) {
     .menu-object-wrapper {
         width: 70%;
