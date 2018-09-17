@@ -9,7 +9,7 @@
         <link rel="stylesheet" type="text/css" media="screen" href="../front-end/css/bootstrap/bootstrap.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="../front-end/css/bootstrap/bootstrap.css" />
         <script src="../front-end/js/my-js/index.js"></script>
-        <script src="../front-end/js/my-js/modalEX.js"></script>
+        <script src="../front-end/js/my-js/eraMenu.js"></script>
     </head>
     <body class="index-body">
         <div class="container menu-container">
@@ -19,6 +19,7 @@
                         <img src="../front-end/Images/objects/escarapela.png" class="selectable-object" alt="Mate" onclick="openModal('arg1810')">
                         <p class="progress-text completed-full">Completado 100%</p>
                     </div>
+                    <!--
                     <div class="selectable-object-wrapper">
                         <img src="../front-end/Images/objects/clock.jpg" class="selectable-object gray" alt="Mate" onclick="startChapter('test01')">
                         <p class="progress-text completed-none">Completado 0%</p>
@@ -35,21 +36,53 @@
                         <img src="../front-end/Images/objects/mate.png" class="selectable-object gray" alt="Mate" onclick="startChapter('arg1810')">
                         <p class="progress-text completed-none">Completado 0%</p>
                     </div>
+                    -->
                 </div>
             </div>
             <!-- Modal content -->
-            <div class="modal-container">
+            <div id="modal-container" class="hide">
 
                 <!--
                 <span class="close">&times;</span>
                 <p>Some text in the Modal..</p>
                 -->
             </div>
-            <div class="modal-background">
+            <div id="modal-background" class="hide">
                 <div class="characters-wrapper">
-                    <div class="simple-character-wrapper"></div>
-                    <div class="simple-character-wrapper"></div>
-                    <div class="simple-character-wrapper"></div>
+                    <div class="simple-character-wrapper">
+                        <div class="character-pic man"></div>
+                        <div class="character-text-wrapper">
+                            <p class="character-text">Encarná a un hombre clásico de la política argentina durante toda la semana de la revolución de 1810. Conocé próceres como Belgrano, Saavedra o Castelli ¡Viva la revolución!</p>
+                        </div>
+                        <div class="character-button-to-play">
+                            <input type="button" value="Comenzar" class="start-game-button" onclick="startChapter('arg1810H')">
+                        </div>
+                    </div>
+                    <div class="simple-character-wrapper">
+                        <div class="character-pic woman"></div>
+                        <div class="character-text-wrapper">
+                            <p class="character-text">Sos una mujer en un mundo de política manejada por hombres, pero tu papel es crucial en la historia del El Virreinato de Río de la Plata. Ayudá a tus colegas a llevar adelante este proceso histórico clave ¡Viva la revolución!</p>
+                        </div>
+                        <div class="character-button-to-play">
+                            <input type="button" value="Comenzar" class="start-game-button" onclick="startChapter('arg1810M')">
+                        </div>
+                    </div>
+                    <div class="simple-character-wrapper">
+                        <div class="character-pic boy"></div>
+                        <div class="character-text-wrapper">
+                            <p class="character-text">Personaje no disponible</p>
+                        </div>
+                        <div class="character-button-to-play">
+                        </div>
+                    </div>
+                    <div class="simple-character-wrapper">
+                        <div class="character-pic girl"></div>
+                        <div class="character-text-wrapper">
+                            <p class="character-text">Personaje no disponible</p>
+                        </div>
+                        <div class="character-button-to-play">
+                        </div>
+                    </div>
                 </div>
             </div>
 

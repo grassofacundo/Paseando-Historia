@@ -59,7 +59,15 @@ html, body {
     filter: linear-gradient(to right, blue 50%, yellow 50%)
 }
 
-.modal-container{
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+#modal-container{
     opacity:0.8;
     background-color:#000;
     position:fixed;
@@ -68,9 +76,8 @@ html, body {
     top:0px;
     left:0px;
     z-index:1000;
-    display: block;
 }
-.modal-background{
+#modal-background{
     background-color: white;
     position: fixed;
     width: 70%;
@@ -78,7 +85,6 @@ html, body {
     top: 5%;
     left: 15%;
     z-index: 1001;
-    display: block;
 }
 
 .characters-wrapper {
@@ -92,9 +98,55 @@ html, body {
 }
 
 .simple-character-wrapper {
-    width: 10%;
-    height: 10%;
-    background-color: red;
+    flex-basis: auto;
+    flex: 1;
+    height: 100%;
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #412c1d;
+}
+
+.character-pic {
+    flex: 2;
+    background-size: cover;
+}
+
+.man {
+    background-image: url(/front-end/Images/menu-characters/man.png);
+}
+
+.woman {
+    background-image: url(/front-end/Images/menu-characters/woman.png);
+}
+
+.boy {
+    /*background-image: url(/front-end/Images/menu-characters/boy.jpg);*/
+}
+
+.girl {
+    /*background-image: url(/front-end/Images/menu-characters/girl.png);*/
+}
+
+.character-text-wrapper {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: burlywood;
+}
+
+.character-text {
+    margin: 8px;
+}
+
+.character-button-to-play {
+    flex: 1;
+}
+
+.start-game-button {
+    margin-top: 10%;
 }
 
 @media (min-width: 768px) {

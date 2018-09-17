@@ -1,6 +1,6 @@
 function startChapter(info) {
     if (typeof info !== 'undefined') {
-        
+
     } else {
         info = "intro";
     }
