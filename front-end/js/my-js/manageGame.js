@@ -17,7 +17,7 @@ function doAjax(type, infoToSend) {
 		{
 			elements = JSON.parse(this.responseText);
 			if (elements[0] == "finished") {
-				window.location.href = "eraMenu.html";
+				window.location.href = "finish.html";
 			}
 			prepareScreen(elements);
 		}
@@ -36,8 +36,9 @@ function prepareScreen(){
 
 	//Ahora tengo que completar todos los elementos que acompañan al diálogo (sin completar el diálogo)
 	document.getElementById("speaking-character").src = "../front-end/Images/" + elements[1];
-	document.getElementById("speaking-character").classList.add("fullBrightness");
-	document.getElementById("speaking-character").classList.remove("quarterBrightness");
+	document.getElementById("speaking-character").style.visibility = "visible";
+	document.getElementById("character-name-container").classList.add("toLeft");
+	document.getElementById("character-name-container").classList.remove("toRight");
 	document.getElementById("background").style.backgroundImage = "url(../front-end/Images/background/" + elements[4] + ")";
 	document.getElementById("main-container").style.visibility = "visible";
 
@@ -53,14 +54,15 @@ function createQuestion(){
 
 	//Crea la pregunta que acompaña a los cuadros
 	createDialogue();
+	document.getElementById("clickToNext").style.visibility = "hidden";
 
 	//create buttons
 	var button1 = document.createElement("button");
 	var button2 = document.createElement("button");
 	var button3 = document.createElement("button");
-	button1.setAttribute("class", "dialogue option-button hasPointer"); //col-3
-	button2.setAttribute("class", "dialogue option-button hasPointer"); //col-3
-	button3.setAttribute("class", "dialogue option-button hasPointer"); //col-3
+	button1.setAttribute("class", "dialogue option-button hasPointer");
+	button2.setAttribute("class", "dialogue option-button hasPointer");
+	button3.setAttribute("class", "dialogue option-button hasPointer");
 	//Hack para que no haya screen de ayuda en la intro
 	if (elements[2] == "Profe historia") {
 		button1.setAttribute("onclick", "next()");
@@ -72,9 +74,13 @@ function createQuestion(){
 		button3.setAttribute("onclick", "showHelp(this,'" + elements[7][2][1] + "')");
 	}
 
-	dialogueArea.appendChild(button1);
-	dialogueArea.appendChild(button2);
-	dialogueArea.appendChild(button3);
+	var buttonContainer = document.createElement("div");
+	buttonContainer.setAttribute("class", "button-container");
+	dialogueArea.appendChild(buttonContainer);
+
+	buttonContainer.appendChild(button1);
+	buttonContainer.appendChild(button2);
+	buttonContainer.appendChild(button3);
 
 	var option1 = document.createElement("p");
 	var option2 = document.createElement("p");
@@ -95,8 +101,9 @@ function showHelp(answer, helpText) {
 	elements[3] = helpText;
 	elements[2] = "Profe"
 	elements[5] = "rgb(0, 123, 255, 0.6)";
-	document.getElementById("speaking-character").classList.remove("fullBrightness");
-	document.getElementById("speaking-character").classList.add("quarterBrightness");
+	document.getElementById("speaking-character").style.visibility = "hidden";
+	document.getElementById("character-name-container").classList.remove("toLeft");
+	document.getElementById("character-name-container").classList.add("toRight");
 	answer = answer.children["0"].innerHTML;
 	document.getElementById("teacher").style.visibility = "visible";
 	event.stopPropagation();
@@ -107,9 +114,9 @@ function createDialogue(answer){
 
 	//create dialogue div
 	var div = document.createElement("div");
-	div.setAttribute("class", "dialogue col-11");
+	div.setAttribute("class", "dialogue");
 	dialogueArea.style.backgroundColor = elements[5];
-	document.getElementById("bottom-left").style.backgroundColor = elements[5];
+	document.getElementById("character-name-container").style.backgroundColor = elements[5];
 
 	//create dialogue text
 	var dialogue = document.createElement("p");
@@ -131,7 +138,7 @@ function createNextIcon() {
 	//Create clickToNext IMG tag
 	var clickToNext = document.createElement("IMG");
 	clickToNext.setAttribute("alt", "Click here!");
-	clickToNext.setAttribute("class", "clickToNext");
+	clickToNext.setAttribute("id", "clickToNext");
 
 	dialogueArea.appendChild(clickToNext);
 	clickToNext.src = "../front-end/Images/click-gif-3.gif";
@@ -145,4 +152,8 @@ function cleanDialogue() {
 	dialogueArea.removeAttribute("onclick");
 	dialogueArea.classList.remove("hasPointer");
 	document.getElementById("teacher").style.visibility = "hidden";
+}
+
+function GoToMenu() {
+    window.location.href = "../index.html";
 }

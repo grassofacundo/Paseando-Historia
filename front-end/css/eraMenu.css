@@ -8,6 +8,17 @@ html, body {
     background-position: center;
 }
 
+.back-arrow {
+    position: fixed;
+    width: 5%;
+    left: 0px;
+    bottom: 0px;
+}
+
+.back-arrow:hover {
+    cursor: pointer;
+}
+
 .menu-container {
     text-align: center;
     height: 100%;

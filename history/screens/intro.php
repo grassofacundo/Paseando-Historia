@@ -16,27 +16,17 @@ function intro($screenNum){
             $background = "biblioteca.jpg";
         break;
         case 3:
-            $screenType = "question";
+            $screenType = "dialogue";
             $character = "teacher-right.png";
             $characterName = "Profe historia";
-            $dialogue = "A todo esto ¿Ustedes están en clase de Historia no?";
+            $dialogue = "*balbucea";
             $background = "biblioteca.jpg";
-            $rightOption = "Sí señora";
-            $rightHelp = "Esto no debería aparecer";
-            $falseOption1 = "Sí";
-            $falseHelp1 = "Falsa ayuda 1";
-            $falseOption2 = "Exacto";
-            $falseHelp2 = "Falsa ayuda 2";
-            $falseOption3 = "Sep";
-            $falseHelp3 = "Falsa ayuda 3";
-            $falseOption4 = "Sa";
-            $falseHelp4 = "Falsa ayuda 4";
         break;
         case 4:
             $screenType = "dialogue";
             $character = "teacher-right.png";
             $characterName = "Profe historia";
-            $dialogue = "¡Oooohh que linda la historia! Mi materia favorita ¿Qué les parece a ustedes? ¿Lenta? ¿Aburrida? ¡Jajá! A lo mejor ESTUDIAR historia es aburrido… pero ¿qué tal HACER historia?";
+            $dialogue = "Acá vamos a dar historia ¡Qué linda la historia! Mi materia favorita ¿Qué les parece a ustedes? ¿Lenta? ¿Aburrida? ¡Jajá! A lo mejor ESTUDIAR historia es aburrido… pero ¿qué tal HACER historia?";
             $background = "biblioteca.jpg";
         break;
         case 5:

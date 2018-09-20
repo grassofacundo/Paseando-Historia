@@ -21,20 +21,29 @@
     cursor: pointer;
 }
 
+.back-arrow {
+    position: fixed;
+    width: 5%;
+    left: 0px;
+    bottom: 0px;
+}
+
 .container-character{
-    max-width: 90%;
-    height: 45%;
+    height: 65%;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
 }
 
 .container-dialogue{
     text-align: center;
-    display: block;
+    display: flex;
     background-color: rgba(0, 0, 0, 0);
-    height: 55%;
-    position: relative;
+    height: 35%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .container-dialogue-teacher {
@@ -42,32 +51,33 @@
 }
 
 .teacher{
-    float: right;
-    height: 100%;
-    max-width: 50%;
+    width: 22%;
     visibility: hidden;
+    bottom: 0px;
+    position: absolute;
+    right: 0px;
 }
 
 .character{
     float: left;
-    height: 100%;
-    max-width: 50%;
-}
-
-.fullBrightness {
-    filter: brightness(100%);
-}
-
-.quarterBrightness {
-    filter: brightness(25%);
-}
-
-#bottom-left {
+    width: 22%;
+    bottom: 0px;
     position: absolute;
-    bottom: 55%;
-    left: 0%;
+}
+
+#character-name-container {
+    position: absolute;
+    bottom: 0px;
     background-color: rgb(184, 73, 15, 0.6);
     text-align: center;
+}
+
+.toLeft {
+    left: 0%;
+}
+
+.toRight {
+    right: 0%;
 }
 
 .speaker-name {
@@ -85,6 +95,7 @@
     background-image: none;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
 }
 
 .dialogue{
@@ -92,8 +103,10 @@
     color: white;
     display: inline-block;
     font-size: 10px;
+    padding-left: 2%;
+    padding-right: 2%;
 }
-  
+
 @media (min-width: 768px) {
     .dialogue {
         font-size: 16px;
@@ -102,25 +115,28 @@
 
 @media (min-width: 1200px) {
     .dialogue {
-        font-size: 20px;
+        font-size: 17px;
     }
 }
 
-.clickToNext{
-    height: 20%;
+#clickToNext{
+    height: 8%;
     position: absolute;
     right: 2%;
-    bottom: 10%;
+    bottom: 2%;
+}
+
+.button-container {
+    display: flex;
+    height: 50%;
+    margin-bottom: 1%;
 }
 
 .option-button {
-    height: 50%;
     border: none;
     background-color: tomato;
-    margin-left: 0.25%;
-    margin-right: 0.25%;
-    box-sizing: content-box;
     width: 30%;
+    height: 100%;
 }
 
 .teacher-help {

@@ -3,21 +3,21 @@ function arg1810($screenNum){
     switch((int)$screenNum){
         case 1:
             $screenType = "dialogue";
-            $character = "hombre01.png";
+            $character = "rodriguez-pena.jpg";
             $characterName = "Nicolás Rodriguez Peña";
             $dialogue = "Hola! Lo estábamos esperando! Mi nombre es Nicolás Rodríguez Peña";
             $background = "casa_pena_afuera.jpg";
         break;
         case 2:
             $screenType = "dialogue";
-            $character = "hombre01.png";
+            $character = "rodriguez-pena.jpg";
             $characterName = "Nicolás Rodriguez Peña";
             $dialogue = "Me dijeron que iba a venir a nuestra reunión. Sólo para estar seguro que usted es quien dice ser...";
             $background = "casa_pena_afuera.jpg";
         break;
         case 3:
             $screenType = "question";
-            $character = "hombre01.png";
+            $character = "rodriguez-pena.jpg";
             $characterName = "Nicolás Rodriguez Peña";
             $dialogue = "¿Me podría nombrar a 3 integrantes de la reunión de hoy?";
             $background = "casa_pena_afuera.jpg";
@@ -34,14 +34,14 @@ function arg1810($screenNum){
         break;
         case 4:
             $screenType = "dialogue";
-            $character = "hombre01.png";
+            $character = "rodriguez-pena.jpg";
             $characterName = "Nicolás Rodriguez Peña";
             $dialogue = "Exacto! Adelante. Le presento al resto del equipo";
             $background = "casa_pena_afuera.jpg";
         break;
         case 5:
             $screenType = "dialogue";
-            $character = "hombre01.png";
+            $character = "rodriguez-pena.jpg";
             $characterName = "Nicolás Rodriguez Peña";
             $dialogue = "Por favor, sientase como en casa. Aquí presentes están los señores Juan José Castelli, Manuel Belgrano, Juan José Paso, Antonio Luis Beruti, Eustoquio Díaz Vélez, Feliciano Antonio Chiclana, José Darragueira, Martín Jacobo Thompson y Juan José Viamonte. Por favor, tome asiento.";
             $background = "Casa_de_Pena.jpg";

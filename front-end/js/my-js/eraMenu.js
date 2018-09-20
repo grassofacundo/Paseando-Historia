@@ -29,3 +29,7 @@ function closeModal() {
     button.removeAttribute("onclick");
 */
 }
+
+function GoToMenu() {
+    window.location.href = "../index.html";
+}
