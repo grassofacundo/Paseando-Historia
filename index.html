@@ -14,10 +14,17 @@
     <body class="index-body">
         <div class="container menu-container">
             <div class="menu-wrapper">
+                <div class="username-wrapper show">
+                    <p id="username"></p>
+                </div>
                 <div class="menu-options-container">
                     <a href="#" onclick="startChapter()" class="menu-option">Nueva partida</a>
                     <a href="HTML/eraMenu.html" class="menu-option">Elegir época histórica</a>
                     <a href="HTML/about.html" class="menu-option">Sobre el proyecto</a>
+                    <div id="username-input-wrapper" class="username-input-wrapper show">
+                        <p>Decinos tu nombre:</p>
+                        <input type="text" id="username-input" onblur="updateName(this.value)">
+                    </div>
                 </div>
             </div>
         </div>

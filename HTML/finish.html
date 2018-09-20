@@ -12,15 +12,15 @@
         <script src="../front-end/js/my-js/eraMenu.js"></script>
         -->
     </head>
-    <body class="index-body">
+    <body class="index-body" onload="getObject()">
         <div class="container menu-container">
             <div class="menu-wrapper">
                 <div class="menu-options-container">
                     <div class="upper-text-wrapper">
-                        <p class="congratulations">¡Felicitaciones!</p>
+                        <p id="congratulations"></p>
                         <p class="upper-text">Conseguiste una parte de la escarapela de 1810</p>
                     </div>
-                    <img src="../front-end/Images/objects/escarapela.png" class="object" alt="Premio escarapela">
+                    <img src="../front-end/Images/objects/escarapela.png" class="object" alt="Premio escarapela" id="trophy-object">
                     <div class="lower-text-wrapper">
                         <p class="congrats-lower-text">Completaste la historia del <b>hombre político</b>. Completa la historia como <b>pueblo</b> para conseguir más partes de la escarapela</p>
                     </div>
