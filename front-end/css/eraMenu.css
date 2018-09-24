@@ -50,15 +50,20 @@ html, body {
     height: 100%;
 }
 
-.selectable-object-wrapper {
+/*.selectable-object-wrapper*/
+#a {
     width: 30%;
     display: inline-block;
     margin: 1% 1% 0% 1%;
 }
 
-.selectable-object-wrapper:hover {
-    border: solid;
-    border-color: yellow;
+#a:hover + #b {
+    display: block;
+  }
+
+/*.progress-text */
+#b {
+    display: none;
 }
 
 .gray {

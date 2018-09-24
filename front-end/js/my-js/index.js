@@ -36,3 +36,22 @@ function updateName(name) {
     xmlhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 	xmlhttp.send("name=" + name);
 }
+
+function checkName() {
+	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function()
+	{
+		if (this.readyState == 4 && this.status == 200)
+		{
+			name = JSON.parse(this.responseText);
+			if (!name) {
+				return;
+			} else {
+				updateName(name);
+			}
+		}
+	};
+    xmlhttp.open("POST","/server-logic/userProvide.php");
+    xmlhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+	xmlhttp.send();
+}
