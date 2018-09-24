@@ -1,7 +1,6 @@
 <?php
 include "intro.php";
 include "arg1810.php";
-include "test01.php";
 
     function getScreenElements($chapterCode, $screenNum){
         switch($chapterCode){
@@ -10,9 +9,6 @@ include "test01.php";
             break;
             case "arg1810":
                 $elements = arg1810($screenNum);
-            break;
-            case "test01":
-                $elements = test01($screenNum);
             break;
             default:
                 $character = "error.png";

@@ -92,10 +92,12 @@ html, body {
     background-color: white;
     position: fixed;
     width: 70%;
-    height: 70%;
+    height: 80%;
     top: 5%;
-    left: 15%;
     z-index: 1001;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
 }
 
 .characters-wrapper {
@@ -120,24 +122,26 @@ html, body {
 }
 
 .character-pic {
-    flex: 2;
+    flex: 4;
     background-size: cover;
 }
 
 .man {
-    background-image: url(/front-end/Images/menu-characters/man.png);
+    background-image: url(/front-end/Images/menu-characters/man.jpg);
+    background-size: cover;
+    background-position: top;
 }
 
 .woman {
-    background-image: url(/front-end/Images/menu-characters/woman.png);
+    background-image: url(/front-end/Images/menu-characters/pueblo.jpg);
+    background-size: cover;
+    background-position: top;
 }
 
-.boy {
-    /*background-image: url(/front-end/Images/menu-characters/boy.jpg);*/
-}
-
-.girl {
-    /*background-image: url(/front-end/Images/menu-characters/girl.png);*/
+.third {
+    background-image: url(/front-end/Images/menu-characters/realista.jpg);
+    background-size: cover;
+    background-position: top;
 }
 
 .character-text-wrapper {
@@ -176,6 +180,9 @@ html, body {
     }
     .index-body {
         background-size: 1920px 1080px;
+    }
+    #modal-background {
+        max-width: 750px;
     }
 }
 /*

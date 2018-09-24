@@ -1,17 +1,17 @@
 <?php
-include_once "objects.php";
+include_once "../history/screens/objects.php";
 session_start();
 
-    if (!is_null($_POST['name'])) {
+    if (isset($_POST['name'])) {
         $_SESSION["username"] = $_POST['name'];
     } else {
-        $username = $_SESSION["username"];
-        $era = $_SESSION["chapterName"];
-        $object = getObject($era);
+        $username = isset($_SESSION["username"]) ? $_SESSION["username"] : "";
+        $elements = getElements($_SESSION["chapterName"]);
         unset($_SESSION["chapterName"]);
         unset($_SESSION["currentScreen"]);
+        unset($_SESSION["rightAnswer"]);
 
-        $elements = array($username, $era, $object[0], $object[1]);
-        echo json_encode($elements);
+        $resources = array($username, $elements[0], $elements[1], $elements[2]);
+        echo json_encode($resources);
     }
 ?>

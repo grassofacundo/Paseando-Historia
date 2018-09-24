@@ -1,9 +1,10 @@
 <?php
-function getObject($eraCode){
+function getElements($eraCode){
     switch($eraCode){
-        case 1810: $object = "escarapela.png" $text="Completaste la historia del hombre político. Completa la historia como pueblo para conseguir más partes de la escarapela"; break;
-        default: $object = "book.png";
+        case "arg1810": $eraAndObject = "Escarapela de 1810"; $object = "escarapela"; $text="Completaste la revolución de mayo de 1810 como hombre político. Completa la historia como pueblo para conseguir más partes de la escarapela"; break;
+        default: $eraAndObject = "Objeto de tu capítulo"; $object = "book.png"; $text="¡Felicitaciones! ¡Completaste el capítulo!";
     }
-    return ($object);
+    $elements = array($eraAndObject, $object, $text);
+    return ($elements);
 }
 ?>

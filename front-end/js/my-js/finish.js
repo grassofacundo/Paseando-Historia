@@ -17,7 +17,9 @@ function getObject() {
 	xmlhttp.send();
 }
 
-function updateFinishScreen() {
-    document.getElementById("congratulations").innerHTML = "¡Felicitaciones " . elements[0];
-    document.getElementById('trophy-object').src=elements[2];
+function updateFinishScreen(elements) {
+	document.getElementById("congratulations").innerHTML = "¡Felicitaciones " + elements[0] + "!";
+	document.getElementById("congratulations-upper-text").innerHTML = "Conseguiste una parte de: " + elements[1];
+	document.getElementById('trophy-object').src="../front-end/Images/objects/" + elements[2] + ".png";
+	document.getElementById('congratulations-lower-text').innerHTML= elements[3];
 }
