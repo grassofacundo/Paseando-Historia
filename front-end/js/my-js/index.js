@@ -44,7 +44,7 @@ function checkName() {
 		if (this.readyState == 4 && this.status == 200)
 		{
 			name = JSON.parse(this.responseText);
-			if (!name) {
+			if (name == "false") {
 				return;
 			} else {
 				updateName(name);
