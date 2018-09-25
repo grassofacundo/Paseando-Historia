@@ -29,6 +29,8 @@ html, body {
     margin-left: auto;
     margin-right: auto;
     background-color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    justify-content: center;
 }
 
 .eraMenuBody {
@@ -43,27 +45,51 @@ html, body {
 .selectable-object-container {
     top: 5%;
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.selectable-object-wrapper {
+    width: 50%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: -webkit-center;
+    padding: 5%;
+    transition: background-color 0.5s ease;
+}
+
+.eraTitle {
+    color: black;
+    transition: color 0.5s ease;
 }
 
 .selectable-object {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
 }
 
-/*.selectable-object-wrapper*/
-#a {
-    width: 30%;
-    display: inline-block;
-    margin: 1% 1% 0% 1%;
+.selectable-object-wrapper:hover {
+    background-color: rgba(0, 0, 0, 0.32);
+    cursor: pointer;
 }
 
-#a:hover + #b {
-    display: block;
-  }
+.selectable-object-wrapper:hover .eraTitle {
+    color: white;
+}
 
-/*.progress-text */
-#b {
-    display: none;
+.selectable-object-wrapper:hover .progress-text {
+    opacity: 1;
+}
+
+.progress-text {
+    opacity: 0;
+    transition: opacity 1s ease;
+    color: #99dc1a;
+    font-weight: 600;
+    font-style: italic;
 }
 
 .gray {
