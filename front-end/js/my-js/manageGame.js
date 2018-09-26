@@ -35,7 +35,7 @@ function prepareScreen(){
 	cleanDialogue();
 
 	//Ahora tengo que completar todos los elementos que acompañan al diálogo (sin completar el diálogo)
-	document.getElementById("speaking-character").src = "../front-end/Images/" + elements[1];
+	document.getElementById("speaking-character").src = "../front-end/Images/menu-characters/Arg1810/Arg1810H/" + elements[1];
 	document.getElementById("speaking-character").style.visibility = "visible";
 	document.getElementById("character-name-container").classList.add("toLeft");
 	document.getElementById("character-name-container").classList.remove("toRight");

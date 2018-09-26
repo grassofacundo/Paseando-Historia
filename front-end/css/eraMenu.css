@@ -158,19 +158,19 @@ html, body {
 }
 
 .man {
-    background-image: url(/front-end/Images/menu-characters/man.jpg);
+    background-image: url(/front-end/Images/menu-characters/Arg1810/man.jpg);
     background-size: cover;
     background-position: top;
 }
 
 .woman {
-    background-image: url(/front-end/Images/menu-characters/pueblo.jpg);
+    background-image: url(/front-end/Images/menu-characters/Arg1810/pueblo.jpg);
     background-size: cover;
     background-position: top;
 }
 
 .third {
-    background-image: url(/front-end/Images/menu-characters/realista.jpg);
+    background-image: url(/front-end/Images/menu-characters/Arg1810/realista.jpg);
     background-size: cover;
     background-position: top;
 }
