@@ -30,13 +30,47 @@
         <link rel="stylesheet" type="text/css" media="screen" href="../front-end/css/bootstrap/bootstrap.css" />
         -->
         <script src="../front-end/js/my-js/eraMenu.js"></script>
+        <script src="../front-end/js/my-js/about.js"></script>
     </head>
     <body class="index-body">
         <div class="container menu-container">
             <img src="../front-end/Images/icons/back-arrow.png" class="back-arrow" alt="Go back" onclick="GoToMenu()">
-            <div class="menu-wrapper">
+            <div class="menu-wrapper about-menu-wrapper">
                 <div class="menu-options-container">
-
+                    <h1>Sobre el proyecto</h1>
+                    <p>Desarrollado por Facundo Grasso, año 2018</p>
+                    <p>Cursando desarrollo de software 2do año. Escuela Urquiza</p>
+                    <a href="#" onclick="showLicense()">Licencia MIT</a>
+                    <br>
+                    <div id="licenceText" class="hidden">
+                        <span>
+                        Todo el software usado para desarrollar esta solución, como así tambien la solucion
+                        en si misma, estan en el marco de licencias GPL-GPU y/o MIT (ver debajo)
+                        
+                        La licencia MIT (MIT)
+                        
+                        Copyright (c) 2013-2018 Blackrock Digital LLC
+                        
+                        Se concede permiso, de forma gratuita, a cualquier persona que obtenga una copia
+                        de este software y los archivos de documentación asociados (el "Software"), para tratar
+                        en el Software sin restricciones, incluidos, entre otros, los derechos
+                        para usar, copiar, modificar, fusionar, publicar, distribuir, sublicenciar y / o vender
+                        copias del software, y para permitir a las personas a quienes se refiere el software
+                        para hacerlo, sujeto a las siguientes condiciones:
+                        
+                        El aviso de copyright anterior y este aviso de permiso se incluirán en
+                        todas las copias o porciones sustanciales del software.
+                        
+                        EL SOFTWARE SE PROPORCIONA "TAL CUAL", SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O
+                        IMPLÍCITO, INCLUIDAS, ENTRE OTRAS, LAS GARANTÍAS DE COMERCIALIZACIÓN,
+                        APTITUD PARA UN PROPÓSITO PARTICULAR Y NO INFRACCIÓN. EN NINGÚN CASO LA
+                        LOS AUTORES O LOS TITULARES DE LOS DERECHOS DE AUTOR SERÁN RESPONSABLES DE CUALQUIER RECLAMACIÓN, DAÑOS U OTROS
+                        RESPONSABILIDAD, YA SEA EN UNA ACCIÓN CONTRACTUAL, AGRAVIO O DE OTRO TIPO, DERIVADA DE
+                        FUERA DE O EN RELACIÓN CON EL SOFTWARE O EL USO U OTROS TRATOS EN
+                        EL SOFTWARE.</span>
+                        <br>
+                        <a href="#" onclick="hideLicense()">Ocultar texto</a>
+                    </div>
                 </div>
             </div>
         </div>

@@ -18,6 +18,14 @@ html, body {
     width: 100%;
 }
 
+.hidden {
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+}
+
 .menu-wrapper {
     height: 100%;
     margin-left: auto;
@@ -26,6 +34,9 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.about-menu-wrapper {
 }
 
 .object {
