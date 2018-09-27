@@ -145,14 +145,14 @@ function arg1810($screenNum){
         break;
         case 17:
             $screenType = "dialogue";
-            $character = "lezica.jpg";
+            $character = "lezica.png";
             $characterName = "Juan José Lezica";
             $dialogue = "Señores ¿En qué puedo ayudarlos?";
             $background = "oficina-lezica.jpg";
         break;
         case 18:
             $screenType = "question";
-            $character = "lezica.jpg";
+            $character = "lezica.png";
             $characterName = "Juan José Lezica";
             $dialogue = "¿Qué decidieron luego de su noche de discusión política?";
             $background = "oficina-lezica.jpg";
@@ -169,14 +169,14 @@ function arg1810($screenNum){
         break;
         case 19:
             $screenType = "dialogue";
-            $character = "lezica.jpg";
+            $character = "lezica.png";
             $characterName = "Juan José Lezica";
             $dialogue = "Wow, realmente parecen convencidos de esto ¿Pero saben qué significa esto?";
             $background = "oficina-lezica.jpg";
         break;
         case 20:
             $screenType = "question";
-            $character = "lezica.jpg";
+            $character = "lezica.png";
             $characterName = "Juan José Lezica";
             $dialogue = "¿Saben qué significa un cabildo abierto?";
             $background = "oficina-lezica.jpg";
@@ -193,7 +193,7 @@ function arg1810($screenNum){
         break;
         case 21:
             $screenType = "dialogue";
-            $character = "lezica.jpg";
+            $character = "lezica.png";
             $characterName = "Juan José Lezica";
             $dialogue = "Sí que están convencidos, tal vez sea el momento de comenzar algo nuevo !Una nueva era de políticos jóvenes de aproxima!";
             $background = "oficina-lezica.jpg";
@@ -221,14 +221,14 @@ function arg1810($screenNum){
         break;
         case 25:
             $screenType = "dialogue";
-            $character = "saavedra.jpg";
+            $character = "saavedra.png";
             $characterName = "Cornelio Saavedra";
             $dialogue = "Sí, pero hay un pequeño detalle con Cisneros";
             $background = "Casa_de_Pena.jpg";
         break;
         case 26:
             $screenType = "question";
-            $character = "saavedra.jpg";
+            $character = "saavedra.png";
             $characterName = "Cornelio Saavedra";
             $dialogue = "¿Qué hizo Cisneros cuando se le solicitó el Cabildo Abierto?";
             $background = "Casa_de_Pena.jpg";
@@ -245,7 +245,7 @@ function arg1810($screenNum){
         break;
         case 27:
             $screenType = "dialogue";
-            $character = "saavedra.jpg";
+            $character = "saavedra.png";
             $characterName = "Cornelio Saavedra";
             $dialogue = "Exacto! Quiso apelar a las fuerzas militares para usarlas en nuestra contra. Pero como yo soy el comandante del grupo militar más importante pude influenciar sobre la decisión";
             $background = "Casa_de_Pena.jpg";
@@ -254,7 +254,7 @@ function arg1810($screenNum){
             $screenType = "dialogue";
             $character = "belgrano.png";
             $characterName = "Manuel Belgrano";
-            $dialogue = "Y como resultado. !El cabildo abierto será realizado el 22 de Mayo!";
+            $dialogue = "Y como resultado ¡El cabildo abierto será realizado el 22 de Mayo!";
             $background = "Casa_de_Pena.jpg";
         break;
         case 29:
@@ -266,21 +266,21 @@ function arg1810($screenNum){
         break;
         case 30:
             $screenType = "dialogue";
-            $character = "donado.jpg";
+            $character = "donado.png";
             $characterName = "Agustín José Donado";
             $dialogue = "Hola, soy Agustín Donado. Creo que no nos hemos presentado todavía, soy el encargado de la impresión de las invitaciones de las personas que vendrán mañana al cabildo abierto";
             $background = "cabildo-vacio.jpg";
         break;
         case 31:
             $screenType = "dialogue";
-            $character = "donado.jpg";
+            $character = "donado.png";
             $characterName = "Agustín José Donado";
             $dialogue = "Hablando de invitaciones ¿Tienen idea quiénes serán invitados para mañana?";
             $background = "cabildo-vacio.jpg";
         break;
         case 32:
             $screenType = "question";
-            $character = "donado.jpg";
+            $character = "donado.png";
             $characterName = "Agustín José Donado";
             $dialogue = "¿Quiénes recibirán invitaciones para el cabildo abierto de mañana?";
             $background = "cabildo-vacio.jpg";
@@ -297,14 +297,14 @@ function arg1810($screenNum){
         break;
         case 33:
             $screenType = "dialogue";
-            $character = "donado.jpg";
+            $character = "donado.png";
             $characterName = "Agustín José Donado";
             $dialogue = "Excelente, las invitaciones serán enviadas. Nos vemos señor";
             $background = "cabildo-vacio.jpg";
         break;
         case 34:
             $screenType = "dialogue";
-            $character = "saavedra.jpg";
+            $character = "saavedra.png";
             $characterName = "Cornelio Saavedra";
             $dialogue = "Buen día, veo que las invitaciones ya están en funcionamiento, por otro lado, tenemos un par de tareas de rutina hasta que…";
             $background = "cabildo-vacio.jpg";
@@ -318,14 +318,14 @@ function arg1810($screenNum){
         break;
         case 36:
             $screenType = "dialogue";
-            $character = "saavedra.jpg";
+            $character = "saavedra.png";
             $characterName = "Cornelio Saavedra";
             $dialogue = "Hay una gran movilización en las afueras del cabildo ¿Qué podrá ser?";
             $background = "cabildo-lleno.jpg";
         break;
         case 37:
             $screenType = "question";
-            $character = "saavedra.jpg";
+            $character = "saavedra.png";
             $characterName = "Cornelio Saavedra";
             $dialogue = "¿Qué clase de movilización es esta?";
             $background = "cabildo-lleno.jpg";
@@ -342,14 +342,14 @@ function arg1810($screenNum){
         break;
         case 38:
             $screenType = "dialogue";
-            $character = "saavedra.jpg";
+            $character = "saavedra.png";
             $characterName = "Cornelio Saavedra";
             $dialogue = "Cierto! French y Beruti están ahí ¿Cuáles son sus demandas?";
             $background = "cabildo-lleno.jpg";
         break;
         case 39:
             $screenType = "question";
-            $character = "saavedra.jpg";
+            $character = "saavedra.png";
             $characterName = "Cornelio Saavedra";
             $dialogue = "¿Cuáles son las demandas de la legión infernal?";
             $background = "cabildo-lleno.jpg";
@@ -366,14 +366,14 @@ function arg1810($screenNum){
         break;
         case 40:
             $screenType = "dialogue";
-            $character = "saavedra.jpg";
+            $character = "saavedra.png";
             $characterName = "Cornelio Saavedra";
-            $dialogue = "Nos viene muy ben el apoyo al Cabildo Abierto. Pero no podemos destituir a Cisneros inmediatamente, necesitamos discutir eso en el Cabildo Abierto de mañana";
+            $dialogue = "Nos viene muy bien el apoyo al Cabildo Abierto. Pero no podemos destituir a Cisneros inmediatamente, necesitamos discutir eso en el Cabildo Abierto de mañana";
             $background = "cabildo-lleno.jpg";
         break;
         case 41:
             $screenType = "dialogue";
-            $character = "saavedra.jpg";
+            $character = "saavedra.png";
             $characterName = "Cornelio Saavedra";
             $dialogue = "Intentaré calmas las aguas garantizando apoyo militar a sus reclamos";
             $background = "cabildo-lleno.jpg";
@@ -401,21 +401,21 @@ function arg1810($screenNum){
         break;
         case 45:
             $screenType = "dialogue";
-            $character = "obispolue.jpg";
+            $character = "obispolue.png";
             $characterName = "Benito Lué y Riega";
             $dialogue = "Yo creo que mientras haya un español en América, los americanos le debemos obediencia, en este caso, le debemos obediencia a Cisneros";
             $background = "cabildoabierto.jpg";
         break;
         case 46:
             $screenType = "dialogue";
-            $character = "castelli.jpg";
+            $character = "castelli.png";
             $characterName = "Juan José Castelli";
             $dialogue = "Yo no estoy de acuerdo ¿Qué debería opinar?";
             $background = "cabildoabierto.jpg";
         break;
         case 47:
             $screenType = "question";
-            $character = "castelli.jpg";
+            $character = "castelli.png";
             $characterName = "Juan José Castelli";
             $dialogue = "¿Qué responde Castelli frente al obispo Lué?";
             $background = "cabildoabierto.jpg";
@@ -432,14 +432,14 @@ function arg1810($screenNum){
         break;
         case 48:
             $screenType = "dialogue";
-            $character = "paso.jpg";
+            $character = "paso.png";
             $characterName = "Juan José Paso";
             $dialogue = "¡Estoy de acuerdo con Castelli!";
             $background = "cabildoabierto.jpg";
         break;
         case 49:
             $screenType = "question";
-            $character = "paso.jpg";
+            $character = "paso.png";
             $characterName = "Juan José Paso";
             $dialogue = "¿Qué dice Paso para apoyar la opinión de Castelli?";
             $background = "cabildoabierto.jpg";
@@ -536,21 +536,21 @@ function arg1810($screenNum){
         break;
         case 60:
             $screenType = "dialogue";
-            $character = "castelli.jpg";
+            $character = "castelli.png";
             $characterName = "Juan José Castelli";
             $dialogue = "¡Esto es inadmisible! Vamos a tomar cartas en el asunto";
             $background = "Casa_de_Pena.jpg";
         break;
         case 61:
             $screenType = "dialogue";
-            $character = "saavedra.jpg";
+            $character = "saavedra.png";
             $characterName = "Cornelio Saavedra";
             $dialogue = "Iremos a visitar a Cisneros a su casa esta noche, iremos con un grupo de gente y lideraremos Castelli y yo";
             $background = "Casa_de_Pena.jpg";
         break;
         case 62:
             $screenType = "dialogue";
-            $character = "saavedra.jpg";
+            $character = "saavedra.png";
             $characterName = "Cornelio Saavedra";
             $dialogue = "Vamos a convencerlo de que renuncie";
             $background = "Casa_de_Pena.jpg";
@@ -563,6 +563,117 @@ function arg1810($screenNum){
             $background = "viernes25.jpg";
         break;
         case 64:
+            $screenType = "dialogue";
+            $character = "saavedra.png";
+            $characterName = "Cornelio Saavedra";
+            $dialogue = "Aquí estamos de vuelta en el Cabildo, frente a otra jornada de discusión";
+            $background = "cabildo-lleno.jpg";
+        break;
+        case 65:
+            $screenType = "dialogue";
+            $character = "saavedra.png";
+            $characterName = "Cornelio Saavedra";
+            $dialogue = "Cisneros finalmente decidió dar un paso al costado. Además la junta formada ayer generó mucho rechazo en la población";
+            $background = "cabildo-lleno.jpg";
+        break;
+        case 66:
+            $screenType = "dialogue";
+            $character = "belgrano.png";
+            $characterName = "Manuel Belgrano";
+            $dialogue = "Señores, la junta con Cisneros a la cabeza que se definió ayer no puede mantenerse";
+            $background = "cabildoabierto.jpg";
+        break;
+        case 67:
+            $screenType = "dialogue";
+            $character = "paso.png";
+            $characterName = "Juan José Paso";
+            $dialogue = "Sí, es necesario asignar otra junta de gobierno ¿Cómo podría formarse esa junta?";
+            $background = "cabildoabierto.jpg";
+        break;
+        case 68:
+            $screenType = "question";
+            $character = "paso.png";
+            $characterName = "Juan José Paso";
+            $dialogue = "¿Quién sería presidente de la junta y quiénes serían sus secretarios?";
+            $background = "cabildoabierto.jpg";
+            $rightOption = "Saavedra presidente. Moreno y Paso sus secretarios";
+            $rightHelp = "La influencia de Saavedra y su experiencia militar lo preparan como la opción más fuerte para ser presidente de la junta";
+            $falseOption1 = "No debería haber una junta, que el pueblo vote cada medida";
+            $falseHelp1 = "Eso sería un modelo totalmente diferente, la idea es formar un grupo que represente al pueblo";
+            $falseOption2 = "Belgrano presidente";
+            $falseHelp2 = "Belgrano no tiene tanta influencia, es un buen candidato, pero no para presidente de junta. Además necesitamos también los secretarios";
+            $falseOption3 = "Cisneros junto a otros dos representantes de la Corona";
+            $falseHelp3 = "Cisneros renunció anoche a su mandato y no tiene el apoyo del pueblo. Además queremos que la nueva junta sea con gente autóctona";
+            $falseOption4 = "Saavedra debería ser el nuevo virrey";
+            $falseHelp4 = "Cuidado, Saavedra es un buen candidato, pero aquí se quiere formar una junta de gobierno, no un virreynato";
+        break;
+        case 69:
+            $screenType = "dialogue";
+            $character = "paso.png";
+            $characterName = "Juan José Paso";
+            $dialogue = "Estoy de acuerdo. Pero además debemos asignar 6 vocales ¿Quiénes podrán ser?";
+            $background = "cabildoabierto.jpg";
+        break;
+        case 70:
+            $screenType = "question";
+            $character = "paso.png";
+            $characterName = "Juan José Paso";
+            $dialogue = "¿Quiénes serán los 6 vocales?";
+            $background = "cabildoabierto.jpg";
+            $rightOption = "Belgrano, Castelli, Azcuénaga, Alberti, Larrea y Matheu";
+            $rightHelp = "Exacto! Son los hombres ideales por su trayectoria y sus ideales";
+            $falseOption1 = "San Martín, Rivadavia, Mitre, Roca, Illia y Perón";
+            $falseHelp1 = "Esos son personajes de épocas historicas muy diferente, no fueron contemporáneos";
+            $falseOption2 = "Saavedra, Moreno y Paso";
+            $falseHelp2 = "Ellos ya están elegidos como presidente y secretarios, necesitamos elegir vocales ahora";
+            $falseOption3 = "6 representantes de la legión infernal";
+            $falseHelp3 = "Ellos no forman parte del cabildo abierto, ellos están afuera representando el pueblo";
+            $falseOption4 = "Opino que los primeros 6 en ofrecerse, sean los vocales";
+            $falseHelp4 = "Necesitamos definir los vocales por voto popular, elegir al azar podría constituir una junta muy débil";
+        break;
+        case 71:
+            $screenType = "dialogue";
+            $character = "belgrano.png";
+            $characterName = "Manuel Belgrano";
+            $dialogue = "Señores, este es un momento histórico para el virreynato del río de la Plata";
+            $background = "cabildoabierto.jpg";
+        break;
+        case 72:
+            $screenType = "dialogue";
+            $character = "belgrano.png";
+            $characterName = "Manuel Belgrano";
+            $dialogue = "Hagan correr la voz que de ahora en adelante el gobierno está en manos de una junta formada por criollos";
+            $background = "cabildoabierto.jpg";
+        break;
+        case 73:
+            $screenType = "dialogue";
+            $character = "belgrano.png";
+            $characterName = "Manuel Belgrano";
+            $dialogue = "¡Viva la revolución!";
+            $background = "cabildoabierto.jpg";
+        break;
+        case 74:
+            $screenType = "dialogue";
+            $character = "pena.png";
+            $characterName = "Nicolás Rodriguez Peña";
+            $dialogue = "Wow, estos sí que fueron días muy intensos";
+            $background = "casa_pena_afuera.jpg";
+        break;
+        case 75:
+            $screenType = "dialogue";
+            $character = "pena.png";
+            $characterName = "Nicolás Rodriguez Peña";
+            $dialogue = "Queremos agradecerte tu participación durante todo este proceso";
+            $background = "casa_pena_afuera.jpg";
+        break;
+        case 76:
+            $screenType = "dialogue";
+            $character = "pena.png";
+            $characterName = "Nicolás Rodriguez Peña";
+            $dialogue = "Por favor, toma esta escarapela en señal de agradecimiento ¡Muchas gracias!";
+            $background = "casa_pena_afuera.jpg";
+        break;
+        case 77:
             $screenType = "finished";
             $character = " ";
             $characterName = " ";

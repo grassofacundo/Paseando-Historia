@@ -67,8 +67,8 @@ html, body {
 }
 
 .selectable-object {
-    width: 80%;
-    height: 80%;
+    width: 100px;
+    height: 100px;
 }
 
 .selectable-object-wrapper:hover {
