@@ -143,14 +143,14 @@ function arg1810($screenNum){
             $dialogue = "Excelente idea! Deberíamos ir con Saavedra a ver al alcalde. Por otro lado, Castelli debería hablar con el síndico procurador, Julián de Leyva";
             $background = "Casa_de_Pena.jpg";
         break;
-        case 16:
+        case 17:
             $screenType = "dialogue";
             $character = "lezica.jpg";
             $characterName = "Juan José Lezica";
             $dialogue = "Señores ¿En qué puedo ayudarlos?";
             $background = "oficina-lezica.jpg";
         break;
-        case 15:
+        case 18:
             $screenType = "question";
             $character = "lezica.jpg";
             $characterName = "Juan José Lezica";
@@ -167,14 +167,14 @@ function arg1810($screenNum){
             $falseOption4 = "No decidimos nada, necesitamos su ayuda";
             $falseHelp4 = "No no, lo que se necesita es una posición activa de discusión. Hay que permitir el diálogo entre autoridades y pueblo de alguna manera";
         break;
-        case 16:
+        case 19:
             $screenType = "dialogue";
             $character = "lezica.jpg";
             $characterName = "Juan José Lezica";
             $dialogue = "Wow, realmente parecen convencidos de esto ¿Pero saben qué significa esto?";
             $background = "oficina-lezica.jpg";
         break;
-        case 15:
+        case 20:
             $screenType = "question";
             $character = "lezica.jpg";
             $characterName = "Juan José Lezica";
@@ -191,42 +191,42 @@ function arg1810($screenNum){
             $falseOption4 = "Que se instaure el comunismo";
             $falseHelp4 = "Noo! Esto va por otro lado, primero hay que decidir con el pueblo qué hacemos con el virrey ¿Cómo se podrá discutir algo así entre todos?";
         break;
-        case 16:
+        case 21:
             $screenType = "dialogue";
             $character = "lezica.jpg";
             $characterName = "Juan José Lezica";
             $dialogue = "Sí que están convencidos, tal vez sea el momento de comenzar algo nuevo !Una nueva era de políticos jóvenes de aproxima!";
             $background = "oficina-lezica.jpg";
         break;
-        case 12:
+        case 22:
             $screenType = "dialogue";
             $character = "noOne.png";
             $characterName = " ";
             $dialogue = "...";
             $background = "domingo20.jpg";
         break;
-        case 16:
+        case 23:
             $screenType = "dialogue";
             $character = "pena.png";
             $characterName = "Nicolás Rodriguez Peña";
             $dialogue = "Señores, han pasado muchas cosas últimamente ¿Qué tal si nos ponemos al día?";
             $background = "Casa_de_Pena.jpg";
         break;
-        case 16:
+        case 24:
             $screenType = "dialogue";
             $character = "belgrano.png";
             $characterName = "Manuel Belgrano";
             $dialogue = "Nosotros fuimos a hablar con el Alcalde Lezica, Saavedra estaba ahí. Solicitamos que hable con Cisneros y llamen a un Cabildo Abierto";
             $background = "Casa_de_Pena.jpg";
         break;
-        case 16:
+        case 25:
             $screenType = "dialogue";
             $character = "saavedra.jpg";
             $characterName = "Cornelio Saavedra";
             $dialogue = "Sí, pero hay un pequeño detalle con Cisneros";
             $background = "Casa_de_Pena.jpg";
         break;
-        case 15:
+        case 26:
             $screenType = "question";
             $character = "saavedra.jpg";
             $characterName = "Cornelio Saavedra";
@@ -243,42 +243,42 @@ function arg1810($screenNum){
             $falseOption4 = "Prohibió a cualquier persona acercarse al Cabildo";
             $falseHelp4 = "Noo! La autoridad de Cisneros está debilitada, no tiene el poder de hacer eso";
         break;
-        case 16:
+        case 27:
             $screenType = "dialogue";
             $character = "saavedra.jpg";
             $characterName = "Cornelio Saavedra";
             $dialogue = "Exacto! Quiso apelar a las fuerzas militares para usarlas en nuestra contra. Pero como yo soy el comandante del grupo militar más importante pude influenciar sobre la decisión";
             $background = "Casa_de_Pena.jpg";
         break;
-        case 16:
+        case 28:
             $screenType = "dialogue";
             $character = "belgrano.png";
             $characterName = "Manuel Belgrano";
             $dialogue = "Y como resultado. !El cabildo abierto será realizado el 22 de Mayo!";
             $background = "Casa_de_Pena.jpg";
         break;
-        case 12:
+        case 29:
             $screenType = "dialogue";
             $character = "noOne.png";
             $characterName = " ";
             $dialogue = "...";
             $background = "lunes21.jpg";
         break;
-        case 16:
+        case 30:
             $screenType = "dialogue";
             $character = "donado.jpg";
             $characterName = "Agustín José Donado";
             $dialogue = "Hola, soy Agustín Donado. Creo que no nos hemos presentado todavía, soy el encargado de la impresión de las invitaciones de las personas que vendrán mañana al cabildo abierto";
             $background = "cabildo-vacio.jpg";
         break;
-        case 16:
+        case 31:
             $screenType = "dialogue";
             $character = "donado.jpg";
             $characterName = "Agustín José Donado";
             $dialogue = "Hablando de invitaciones ¿Tienen idea quiénes serán invitados para mañana?";
             $background = "cabildo-vacio.jpg";
         break;
-        case 15:
+        case 32:
             $screenType = "question";
             $character = "donado.jpg";
             $characterName = "Agustín José Donado";
@@ -295,35 +295,35 @@ function arg1810($screenNum){
             $falseOption4 = "No necesitamos invitaciones, el cabildo estará abierto para todos";
             $falseHelp4 = "No no, se necesita un número concreto de personas, porque luego de discutir, se votará y esas personas tendrán que firmar";
         break;
-        case 16:
+        case 33:
             $screenType = "dialogue";
             $character = "donado.jpg";
             $characterName = "Agustín José Donado";
             $dialogue = "Excelente, las invitaciones serán enviadas. Nos vemos señor";
             $background = "cabildo-vacio.jpg";
         break;
-        case 16:
+        case 34:
             $screenType = "dialogue";
             $character = "saavedra.jpg";
             $characterName = "Cornelio Saavedra";
             $dialogue = "Buen día, veo que las invitaciones ya están en funcionamiento, por otro lado, tenemos un par de tareas de rutina hasta que…";
             $background = "cabildo-vacio.jpg";
         break;
-        case 16:
+        case 35:
             $screenType = "dialogue";
             $character = "noOne.png";
             $characterName = " ";
             $dialogue = "*ruido de muchedumbre";
             $background = "cabildo-vacio.jpg";
         break;
-        case 16:
+        case 36:
             $screenType = "dialogue";
             $character = "saavedra.jpg";
             $characterName = "Cornelio Saavedra";
             $dialogue = "Hay una gran movilización en las afueras del cabildo ¿Qué podrá ser?";
             $background = "cabildo-lleno.jpg";
         break;
-        case 15:
+        case 37:
             $screenType = "question";
             $character = "saavedra.jpg";
             $characterName = "Cornelio Saavedra";
@@ -340,14 +340,14 @@ function arg1810($screenNum){
             $falseOption4 = "Son los ejercitos ingleses que vienen a atacarnos";
             $falseHelp4 = "Nooo, los ingleses no tienen nada que ver acá, ellos están con sus propios problemas en algún lado lejos de aquí";
         break;
-        case 16:
+        case 38:
             $screenType = "dialogue";
             $character = "saavedra.jpg";
             $characterName = "Cornelio Saavedra";
             $dialogue = "Cierto! French y Beruti están ahí ¿Cuáles son sus demandas?";
             $background = "cabildo-lleno.jpg";
         break;
-        case 15:
+        case 39:
             $screenType = "question";
             $character = "saavedra.jpg";
             $characterName = "Cornelio Saavedra";
@@ -364,21 +364,21 @@ function arg1810($screenNum){
             $falseOption4 = "Sólo están reunidos aquí, no buscan nada en particular";
             $falseHelp4 = "No! Ellos están aquí por algo muy importante!";
         break;
-        case 16:
+        case 40:
             $screenType = "dialogue";
             $character = "saavedra.jpg";
             $characterName = "Cornelio Saavedra";
             $dialogue = "Nos viene muy ben el apoyo al Cabildo Abierto. Pero no podemos destituir a Cisneros inmediatamente, necesitamos discutir eso en el Cabildo Abierto de mañana";
             $background = "cabildo-lleno.jpg";
         break;
-        case 16:
+        case 41:
             $screenType = "dialogue";
             $character = "saavedra.jpg";
             $characterName = "Cornelio Saavedra";
             $dialogue = "Intentaré calmas las aguas garantizando apoyo militar a sus reclamos";
             $background = "cabildo-lleno.jpg";
         break;
-        case 17:
+        case 42:
             $screenType = "finished";
             $character = " ";
             $characterName = " ";
