@@ -4,7 +4,7 @@
 
     $needsHelp = false;
     if ($_POST['type'] == "answer") {
-        if ($_POST['info'] == $_SESSION["rightAnswer"] || $_SESSION["chapterName"] == "intro") {
+        if ($_POST['info'] == $_SESSION["rightAnswer"] /*|| $_SESSION["chapterName"] == "intro"*/) {
             //Aumentar en 1 la screen
             $nextScreen = intval($_SESSION["currentScreen"]) + 1;
             $_SESSION["currentScreen"] = (string)$nextScreen;

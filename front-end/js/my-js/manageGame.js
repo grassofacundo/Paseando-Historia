@@ -63,16 +63,16 @@ function createQuestion(){
 	button1.setAttribute("class", "dialogue option-button hasPointer");
 	button2.setAttribute("class", "dialogue option-button hasPointer");
 	button3.setAttribute("class", "dialogue option-button hasPointer");
-	//Hack para que no haya screen de ayuda en la intro
+	/*Hack para que no haya screen de ayuda en la intro
 	if (elements[2] == "Profe historia") {
 		button1.setAttribute("onclick", "next()");
 		button2.setAttribute("onclick", "next()");
 		button3.setAttribute("onclick", "next()");
-	} else {
-		button1.setAttribute("onclick", "showHelp(this,'" + elements[7][0][1] + "')");
-		button2.setAttribute("onclick", "showHelp(this,'" + elements[7][1][1] + "')");
-		button3.setAttribute("onclick", "showHelp(this,'" + elements[7][2][1] + "')");
-	}
+	} else { */
+	button1.setAttribute("onclick", "showHelp(this,'" + elements[7][0][1] + "')");
+	button2.setAttribute("onclick", "showHelp(this,'" + elements[7][1][1] + "')");
+	button3.setAttribute("onclick", "showHelp(this,'" + elements[7][2][1] + "')");
+	/*}*/
 
 	var buttonContainer = document.createElement("div");
 	buttonContainer.setAttribute("class", "button-container");

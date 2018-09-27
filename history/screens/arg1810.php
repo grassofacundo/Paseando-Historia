@@ -83,7 +83,7 @@ function arg1810($screenNum){
             $rightOption = "El actual virrey Cisneros fue designado por la junta de Sevilla, al estar tomada, ya no tiene legitimidad aquí";
             $rightHelp = "Tal cual! Mucha gente aquí en el Virreynato del Río de la Plata (porque todavía no se llama Argentina) cree que debería retirarse";
             $falseOption1 = "Que los ingleses pueden conquistarnos más fácilmente";
-            $falseHelp1 = "No no, los ingleses están con otros problemas allá en Europa, nuestros problemas son sólo con la Corono Española";
+            $falseHelp1 = "No no, los ingleses están con otros problemas allá en Europa, nuestros problemas son sólo con la Corona Española";
             $falseOption2 = "El virrey Saavedra asumirá en el poder";
             $falseHelp2 = "No no, Saavedra es un político y militar de aquí, no es español. El virrey actual se llama Cisneros";
             $falseOption3 = "La independencia argentina";
@@ -181,7 +181,7 @@ function arg1810($screenNum){
             $dialogue = "¿Saben qué significa un cabildo abierto?";
             $background = "oficina-lezica.jpg";
             $rightOption = "Una reunión pública entre autoridades y pueblo para debatir temas de interés para la ciudadanía";
-            $rightHelp = "Sí, al fin una posibilidad de que la gente decida y no que todas las decisiones las tome la Corono Española";
+            $rightHelp = "Sí, al fin una posibilidad de que la gente decida y no que todas las decisiones las tome la Corona Española";
             $falseOption1 = "Dejar todas las puertas del cabildo sin llave para que todos puedan participar según deseen";
             $falseHelp1 = "No! no es literal dejar el cabildo abierto. Decir Cabildo Abierto es simbólico";
             $falseOption2 = "Borrar la constitución y que toda la gente escriba lo que quiera";
@@ -237,7 +237,7 @@ function arg1810($screenNum){
             $falseOption1 = "Renunció instantaneamente";
             $falseHelp1 = "No! Cisneros tiene mucho interés en seguir siendo virrey, hizo otra cosa";
             $falseOption2 = "Accedió instantaneamente";
-            $falseHelp2 = "Ojalá hubiese sido tan fácil. No, de hecho Cisneros hizo anto para evitar cualquier revuelta";
+            $falseHelp2 = "Ojalá hubiese sido tan fácil. No, de hecho Cisneros hizo algo para evitar cualquier revuelta";
             $falseOption3 = "Se fue a España";
             $falseHelp3 = "No no, Cisneros sigue acá y no tiene intenciones de dejar el poder";
             $falseOption4 = "Prohibió a cualquier persona acercarse al Cabildo";
@@ -379,6 +379,190 @@ function arg1810($screenNum){
             $background = "cabildo-lleno.jpg";
         break;
         case 42:
+            $screenType = "dialogue";
+            $character = "noOne.png";
+            $characterName = " ";
+            $dialogue = "...";
+            $background = "martes22.jpg";
+        break;
+        case 43:
+            $screenType = "dialogue";
+            $character = "belgrano.png";
+            $characterName = "Manuel Belgrano";
+            $dialogue = "Buen día señores, finalmente podemos darle inicio al Cabildo Abierto para decidir sobre la destitución o la permanencia del actual virrey Cisneros";
+            $background = "cabildoabierto.jpg";
+        break;
+        case 44:
+            $screenType = "dialogue";
+            $character = "belgrano.png";
+            $characterName = "Manuel Belgrano";
+            $dialogue = "Aquí presentes hay tanto representantes de la Corona Española como opositores al virrey. Obispo Lué ¿Quiere comenzar?";
+            $background = "cabildoabierto.jpg";
+        break;
+        case 45:
+            $screenType = "dialogue";
+            $character = "obispolue.jpg";
+            $characterName = "Benito Lué y Riega";
+            $dialogue = "Yo creo que mientras haya un español en América, los americanos le debemos obediencia, en este caso, le debemos obediencia a Cisneros";
+            $background = "cabildoabierto.jpg";
+        break;
+        case 46:
+            $screenType = "dialogue";
+            $character = "castelli.jpg";
+            $characterName = "Juan José Castelli";
+            $dialogue = "Yo no estoy de acuerdo ¿Qué debería opinar?";
+            $background = "cabildoabierto.jpg";
+        break;
+        case 47:
+            $screenType = "question";
+            $character = "castelli.jpg";
+            $characterName = "Juan José Castelli";
+            $dialogue = "¿Qué responde Castelli frente al obispo Lué?";
+            $background = "cabildoabierto.jpg";
+            $rightOption = "Que habiendo caducado el poder Real, la soberanía debía volver al pueblo que podía formar juntas de gobierno tanto en España como en América";
+            $rightHelp = "¡Perfecto! Castelli esta en el grupo de los que quieren que Cisneros deje el poder y se forme una junta de gobierno con gente del virreynato del río de la plata y no con españoles";
+            $falseOption1 = "Que la opinión del obispo tiene sentido y que decide defender al virrey Cisneros para que mantenga su posición";
+            $falseHelp1 = "Noo! Castelli es uno de los compormetidos para que Cisneros sea destituido";
+            $falseOption2 = "Opina que Cisneros debe retirarse, pero que otro virrey español tome su lugar";
+            $falseHelp2 = "No no! Castelli forma parte del grupo que desea que la influencia de la Corona Española se reduzca o que incluso desaparezca";
+            $falseOption3 = "Cree que lo mejor debería ser no opinar y dejar todo en manos de Belgrano";
+            $falseHelp3 = "Nooo, todos los presentes en el Cabildo Abierto son muy activos políticamente, todos quieren opinar y ser escuchados";
+            $falseOption4 = "Le va a decir que no tiene autoridad para opinar";
+            $falseHelp4 = "No no, si bien Castelli opina diferente al obispo, debe dejarlo hablar y escucharlo";
+        break;
+        case 48:
+            $screenType = "dialogue";
+            $character = "paso.jpg";
+            $characterName = "Juan José Paso";
+            $dialogue = "¡Estoy de acuerdo con Castelli!";
+            $background = "cabildoabierto.jpg";
+        break;
+        case 49:
+            $screenType = "question";
+            $character = "paso.jpg";
+            $characterName = "Juan José Paso";
+            $dialogue = "¿Qué dice Paso para apoyar la opinión de Castelli?";
+            $background = "cabildoabierto.jpg";
+            $rightOption = "Opina que no había tiempo que perder y que había que formar inmediatamente una junta de gobierno sin Cisneros";
+            $rightHelp = "¡Sí! Una junta de gobierno con gente autóctona, sin Cisneros";
+            $falseOption1 = "Opina que hay que dejar entrar a la Legión Infernal para que opine";
+            $falseHelp1 = "No no, la idea del Cabildo es para que disctuan un selecto grupo de políticos, no todos";
+            $falseOption2 = "Cree que lo mejor es levantar la sesión y tener tiempo para pensar";
+            $falseHelp2 = "Noo, Paso está muy convencido de lo que quiere, no está en sus planes perder el tiempo";
+            $falseOption3 = "Opina que el poder lo deben tener los americanos, sólo hasta que el poder Real vuelva a tomar fuerza";
+            $falseHelp3 = "Eso no es así, la idea es establecer una junta sin la influencia de la Corona Española de manera definitiva";
+            $falseOption4 = "No es necesario opinar, solamente votar al final de la sesión por la renuncia de Cisneros";
+            $falseHelp4 = "Paso tiene algo importante para decir, hay que decidir qué hacer si Cisneros deja el poder";
+        break;
+        case 50:
+            $screenType = "dialogue";
+            $character = "belgrano.png";
+            $characterName = "Manuel Belgrano";
+            $dialogue = "Bien, esta sesión va a ser muy larga, pero parece que la mayoría opina que Cisneros renuncie al poder";
+            $background = "cabildoabierto.jpg";
+        break;
+        case 51:
+            $screenType = "dialogue";
+            $character = "belgrano.png";
+            $characterName = "Manuel Belgrano";
+            $dialogue = "Mañana daremos a conocer la decisión al pueblo";
+            $background = "cabildoabierto.jpg";
+        break;
+        case 52:
+            $screenType = "dialogue";
+            $character = "noOne.png";
+            $characterName = " ";
+            $dialogue = "...";
+            $background = "miercoles23.jpg";
+        break;
+        case 53:
+            $screenType = "dialogue";
+            $character = "belgrano.png";
+            $characterName = "Manuel Belgrano";
+            $dialogue = "Bueno señores, la votación salió 159 a 67, triunfó la opción que exigía la deposición del virrey";
+            $background = "cabildoabierto.jpg";
+        break;
+        case 54:
+            $screenType = "dialogue";
+            $character = "belgrano.png";
+            $characterName = "Manuel Belgrano";
+            $dialogue = "Voy a garantizar que se corra la voz por todo el pueblo, porque esta es la voluntad popular";
+            $background = "cabildoabierto.jpg";
+        break;
+        case 55:
+            $screenType = "dialogue";
+            $character = "noOne.png";
+            $characterName = " ";
+            $dialogue = "...";
+            $background = "jueves24.jpg";
+        break;
+        case 56:
+            $screenType = "dialogue";
+            $character = "pena.png";
+            $characterName = "Nicolás Rodriguez Peña";
+            $dialogue = "Buen día, ayer se dio a conocer que la voluntad popular y la decisión del Cabildo Abierto fue la de sacar a Cisneros del poder";
+            $background = "Casa_de_Pena.jpg";
+        break;
+        case 57:
+            $screenType = "dialogue";
+            $character = "pena.png";
+            $characterName = "Nicolás Rodriguez Peña";
+            $dialogue = "¿Te enteraste qué pasó luego?";
+            $background = "Casa_de_Pena.jpg";
+        break;
+        case 58:
+            $screenType = "question";
+            $character = "pena.png";
+            $characterName = "Nicolás Rodriguez Peña";
+            $dialogue = "¿Qué pasó luego de avisar que Cisneros debía dejar el poder?";
+            $background = "Casa_de_Pena.jpg";
+            $rightOption = "Un grupo del Cabildo formó una junta con Cisneros a la cabeza";
+            $rightHelp = "Lamentablemente, es cierto, si bien agregaron a la junta a algunos criollos, Cisneros sigue a la cabeza.";
+            $falseOption1 = "Cisneros llamó al ejercito y está amenazando a sus opositores";
+            $falseHelp1 = "Cisneros aún tiene muchas influencias políticas aquí, no utilizó las armas en este caso";
+            $falseOption2 = "La Corona Española envió otro representante";
+            $falseHelp2 = "En esa época las comunicaciones eran muy lentas, la Corona Española no llegó a enterarse de todo esto y enviar otro representante habría tomado mucho tiempo también";
+            $falseOption3 = "Cisneros convenció a muchos políticos para que cambien su voto";
+            $falseHelp3 = "Cisneros decidió hacer otra cosa, pero no afectó la votación general";
+            $falseOption4 = "Declaró la guerra con otro país";
+            $falseHelp4 = "No no, él sigue insistiendo en defender su posición de virrey, hizo otra cosa";
+        break;
+        case 59:
+            $screenType = "dialogue";
+            $character = "pena.png";
+            $characterName = "Nicolás Rodriguez Peña";
+            $dialogue = "Sí, estamos todo terriblemente enojados. Esta decisión traicionó la voluntad popular.";
+            $background = "Casa_de_Pena.jpg";
+        break;
+        case 60:
+            $screenType = "dialogue";
+            $character = "castelli.jpg";
+            $characterName = "Juan José Castelli";
+            $dialogue = "¡Esto es inadmisible! Vamos a tomar cartas en el asunto";
+            $background = "Casa_de_Pena.jpg";
+        break;
+        case 61:
+            $screenType = "dialogue";
+            $character = "saavedra.jpg";
+            $characterName = "Cornelio Saavedra";
+            $dialogue = "Iremos a visitar a Cisneros a su casa esta noche, iremos con un grupo de gente y lideraremos Castelli y yo";
+            $background = "Casa_de_Pena.jpg";
+        break;
+        case 62:
+            $screenType = "dialogue";
+            $character = "saavedra.jpg";
+            $characterName = "Cornelio Saavedra";
+            $dialogue = "Vamos a convencerlo de que renuncie";
+            $background = "Casa_de_Pena.jpg";
+        break;
+        case 63:
+            $screenType = "dialogue";
+            $character = "noOne.png";
+            $characterName = " ";
+            $dialogue = "...";
+            $background = "viernes25.jpg";
+        break;
+        case 64:
             $screenType = "finished";
             $character = " ";
             $characterName = " ";
