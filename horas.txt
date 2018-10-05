@@ -1,0 +1,26 @@
+17/08: 1hs agregar imágenes stock de personajes para testing + agregar bootstrap al proyecto
+20/08: 6hs creación de back-end en PHP para el manejo de las pantallas + acomodar archivos en proyecto + creación de HTML mínimo para testar
+21/08 4hs ajustes de lógica en el back-end + creación y mínimo funcionamiento de front-end en javascript
+21/08 2.5hs implementación de elementos en archivos HTML para interactuar con javascript
+22/08 3.5hs implementación del módulo de preguntas tanto desde front-end como back-end + agregar otras imágenes para testear
+23/08 5hs finalización del módulo pregunta + inicio de HTML intro
+03/09 4hs creación de menú de selección de épocas + interacción con back-end
+03/09 2.5hs testing con etapa histórica falsa
+04/09 2hs modificación de las ayudas de la profesora tanto desde front-end como back-and
+05/09 1hs ajuste de ayuda de la profesora
+06/09 1hs arreglo de path
+07/09 2.5hs adaptación de la ayuda profesora para la intro
+12/09: 5hs encuentro con Susana Carranza, profesora de historia, charla sobre el dictado de clase de historia, los estudiantes y las posibilidades.
+14/09 4hs búsqueda de ícono + estilo de menu de selección de épocas
+14/09 2.5hs inicio de modal de selección de personaje
+17/09 4hs modal de personaje WIP
+20/09 5hs inicio de pantalla de triunfo + ajustes de estilo varios + navegación entre menús
+20/09 1.5hs mejora de estilo en la pantalla de selección de época + estilo de pantalla de triunfo
+24/09 1hs implementación de nombre de usuario
+24/09 0.5hs arreglo de nombre de usuario
+24/09 1.5hs aligerar peso de imágenes + fin de pantalla de triunfo
+25/09 1.5hs ajuste de imágenes en la selección de época
+26/09 7hs carga de contenido para revolucion de mayo WIP
+27/09 4hs fin de carga para revolucion de mayo + fin de tutorial
+
+Total: 
