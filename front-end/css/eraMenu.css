@@ -55,15 +55,33 @@ html, body {
     height: 25%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: -webkit-center;
-    padding: 5%;
+    justify-content: space-between;
     transition: background-color 0.5s ease;
+}
+
+.fondo {
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+.fondo-arg1810 {
+    background-image: url(../Images/objects/escarapela.png);    
+}
+
+.fondo-rev-ind {
+    background-image: url(../Images/objects/ferrocarril.png);
+}
+
+.fondo-seg-guerra {
+    background-image: url(../Images/objects/tanque.png);
 }
 
 .eraTitle {
     color: black;
     transition: color 0.5s ease;
+    margin-top: 5px;
 }
 
 .selectable-object {
@@ -90,6 +108,7 @@ html, body {
     color: #99dc1a;
     font-weight: 600;
     font-style: italic;
+    margin-bottom: 5px;
 }
 
 .gray {
