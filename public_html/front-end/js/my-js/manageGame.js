@@ -1,3 +1,9 @@
+function arrancar() {
+	document.getElementById("main-container").style.visibility = "visible";
+	document.getElementById("hack").style.visibility = "hidden";
+	next();
+}
+
 function next(answer){
 	if (answer === undefined || answer === null || answer === "undefined"){
 		type = "next";
@@ -69,9 +75,9 @@ function createQuestion(){
 		button2.setAttribute("onclick", "next()");
 		button3.setAttribute("onclick", "next()");
 	} else { */
-	button1.setAttribute("onclick", "showHelp(this,'" + elements[7][0][1] + "')");
-	button2.setAttribute("onclick", "showHelp(this,'" + elements[7][1][1] + "')");
-	button3.setAttribute("onclick", "showHelp(this,'" + elements[7][2][1] + "')");
+	button1.setAttribute("onclick", "showHelp(this,'" + elements[7][0][1] + "', event)");
+	button2.setAttribute("onclick", "showHelp(this,'" + elements[7][1][1] + "', event)");
+	button3.setAttribute("onclick", "showHelp(this,'" + elements[7][2][1] + "', event)");
 	/*}*/
 
 	var buttonContainer = document.createElement("div");
@@ -94,18 +100,19 @@ function createQuestion(){
 	button3.appendChild(option3);
 }
 
-function showHelp(answer, helpText) {
+function showHelp(answer, helpText, event) {
 
 	cleanDialogue();
 	elements[0] = "dialogue";
 	elements[3] = helpText;
 	elements[2] = "Profe"
-	elements[5] = "rgb(0, 123, 255, 0.6)";
+	elements[5] = "rgba(0, 123, 255, 0.6)";
 	document.getElementById("speaking-character").style.visibility = "hidden";
 	document.getElementById("character-name-container").classList.remove("toLeft");
 	document.getElementById("character-name-container").classList.add("toRight");
 	answer = answer.children["0"].innerHTML;
 	document.getElementById("teacher").style.visibility = "visible";
+	//e = window.event;
 	event.stopPropagation();
 	createDialogue(answer);
 }

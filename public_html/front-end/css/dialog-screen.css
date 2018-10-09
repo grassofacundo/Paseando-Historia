@@ -68,7 +68,7 @@
 #character-name-container {
     position: absolute;
     bottom: 0px;
-    background-color: rgb(184, 73, 15, 0.6);
+    background-color: rgba(184, 73, 15, 0.6);
     text-align: center;
 }
 

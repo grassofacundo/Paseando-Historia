@@ -687,7 +687,7 @@ function arg1810($screenNum){
             $dialogue = "Nos quedamos sin diálogos";
             $background = "error404.png";
     }
-    $backgroundColor = "rgb(184, 73, 15, 0.6)";
+    $backgroundColor = "rgba(184, 73, 15, 0.6)";
     $elements = array($screenType, $character, $characterName, $dialogue, $background, $backgroundColor);
     if ($screenType == "question") {
         array_push($elements, $rightOption, $rightHelp, $falseOption1, $falseHelp1, $falseOption2, $falseHelp2, $falseOption3, $falseHelp3, $falseOption4, $falseHelp4);
