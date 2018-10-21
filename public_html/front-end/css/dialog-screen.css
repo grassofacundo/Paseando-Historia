@@ -5,7 +5,7 @@
 
 #main-container{
     position: relative;
-    visibility: hidden;
+    display: none;
     padding-left: 0px;
     padding-right: 0px;
 }
@@ -13,7 +13,7 @@
 .interaction-container{
     height: 75%;
     position: absolute;
-    bottom: 5%;
+    bottom: 0%;
     width: 100%;
 }
 
@@ -22,7 +22,7 @@
 }
 
 .container-character{
-    height: 65%;
+    height: 45%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -33,7 +33,7 @@
     text-align: center;
     display: flex;
     background-color: rgba(0, 0, 0, 0);
-    height: 35%;
+    height: 55%;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
@@ -44,7 +44,7 @@
 }
 
 .teacher{
-    width: 22%;
+    width: 35%;
     visibility: hidden;
     bottom: 0px;
     position: absolute;
@@ -53,9 +53,26 @@
 
 .character{
     float: left;
-    width: 22%;
+    width: 35%;
     bottom: 0px;
     position: absolute;
+}
+
+.hack-img {
+    height: 200px;
+}
+
+.hack-img:hover {
+    cursor: pointer;
+}
+
+.hack-wrapper {
+    text-align: center;
+}
+
+.hack-text {
+    color: white;
+    font-size: 30px;
 }
 
 #character-name-container {
@@ -98,11 +115,27 @@
     font-size: 10px;
     padding-left: 2%;
     padding-right: 2%;
+    font-size: 12px;
 }
 
 @media (min-width: 768px) {
     .dialogue {
         font-size: 16px;
+    }
+    .interaction-container {
+        bottom: 5%;
+    }
+    .container-character {
+        height: 65%;
+    }
+    .container-dialogue {
+        height: 35%;
+    }
+    .character {
+        width: 22%;
+    }
+    .teacher {
+        width: 22%;
     }
 }
 
@@ -121,7 +154,7 @@
 
 .button-container {
     display: flex;
-    height: 50%;
+    height: 60%;
     margin-bottom: 1%;
 }
 
@@ -137,3 +170,6 @@
     color: cyan;
 }
 
+.back-arrow {
+    bottom: auto;
+}

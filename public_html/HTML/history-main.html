@@ -23,17 +23,18 @@
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" type="text/css" media="screen" href="../front-end/css/dialog-screen.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="../front-end/css/general.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="../front-end/css/dialog-screen.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="../front-end/css/bootstrap/bootstrap.css" />
         <script src="../front-end/js/my-js/manageGame.js"></script>
     </head>
     <body class="body" id="background">
-        <div>
-            <input type="button" onclick="arrancar()" value="Empezar" id="hack">
+        <div class="hack-wrapper" id="hack">
+            <img src="../front-end/Images/objects/book.png" onclick="arrancar()" class="hack-img">
+            <p class="hack-text">Comenzar</p>
         </div>
             <img src="../front-end/Images/icons/back-arrow.png" class="back-arrow" alt="Go back" onclick="GoToMenu()">
-            <div id="main-container" class="container" style="visibility: hidden;">
+            <div id="main-container" class="container">
                 <div class="interaction-container">
                     <div class="container-character">
                         <img id="speaking-character" alt="Speaking character" class="character-image character">

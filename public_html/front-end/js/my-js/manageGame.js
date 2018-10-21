@@ -1,6 +1,6 @@
 function arrancar() {
-	document.getElementById("main-container").style.visibility = "visible";
-	document.getElementById("hack").style.visibility = "hidden";
+	document.getElementById("main-container").style.display = "block";
+	document.getElementById("hack").style.display = "none";
 	next();
 }
 

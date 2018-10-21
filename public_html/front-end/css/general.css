@@ -3,10 +3,12 @@
     width: 50px;
     left: 0px;
     bottom: 0px;
+    z-index: 1;
 }
 
 .back-arrow:hover {
     cursor: pointer;
+    filter: brightness(0) invert(1);
 }
 
 @media (min-width: 768px) {
