@@ -20,7 +20,6 @@ html, body {
     background-color: rgba(255, 255, 255, 0.6);
     display: flex;
     justify-content: center;
-    overflow: auto;
 }
 
 .eraMenuBody {
@@ -131,69 +130,69 @@ html, body {
 #modal-background{
     background-color: white;
     position: fixed;
-    width: 70%;
-    height: 80%;
+    width: 90%;
+    max-height: 100%;
+    height: unset;
     top: 5%;
     z-index: 1001;
     margin: 0 auto;
     left: 0;
     right: 0;
+    overflow: auto;
 }
 
 .characters-wrapper {
-    height: 100%;
+    height: auto;
     width: 100%;
     display: flex;
-    flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: stretch;
+    flex-direction: column;
 }
 
 .simple-character-wrapper {
     flex-basis: auto;
     flex: 1;
-    height: 100%;
+    height: 250px;
     border-style: solid;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     background-color: #412c1d;
 }
 
 .character-pic {
-    flex: 4;
-    background-size: cover;
+    flex: 3;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .man {
     background-image: url(/front-end/Images/menu-characters/Arg1810/man.jpg);
-    background-size: cover;
-    background-position: top;
 }
 
 .woman {
     background-image: url(/front-end/Images/menu-characters/Arg1810/pueblo.jpg);
-    background-size: cover;
-    background-position: top;
 }
 
 .third {
     background-image: url(/front-end/Images/menu-characters/Arg1810/realista.jpg);
-    background-size: cover;
-    background-position: top;
 }
 
 .character-text-wrapper {
-    flex: 3;
+    flex: 4;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: burlywood;
+    flex-direction: column;
 }
 
 .character-text {
     margin: 8px;
+    font-size: 12px;
 }
 
 .character-button-to-play {
@@ -202,6 +201,14 @@ html, body {
 
 .start-game-button {
     margin-top: 10%;
+}
+
+.start-game-button-upper {
+    display: block;
+}
+
+.start-game-button-lower {
+    display: none;
 }
 
 @media (min-width: 768px) {
@@ -218,6 +225,37 @@ html, body {
 @media (min-width: 992px) {
     .menu-object-wrapper {
         width: 50%;
+    }
+    .characters-wrapper {
+        flex-direction: row;
+        height: 100%;
+    }
+    .simple-character-wrapper {
+        height: 100%;
+        flex-direction: column;
+    }
+    #modal-background {
+        max-height: 80%;
+        height: 100%;
+        width: 70%
+    }
+    .character-pic {
+        background-size: cover;
+        background-position: top;
+        flex: 4;
+    }
+    .character-text {
+        font-size: 14px;
+    }
+    .character-text-wrapper {
+        flex: 3;
+        flex-direction: unset;
+    }
+    .start-game-button-upper {
+        display: none;
+    }
+    .start-game-button-lower {
+        display: block;
     }
 }
 @media (min-width: 1200px) {
