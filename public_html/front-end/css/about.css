@@ -19,11 +19,11 @@ html, body {
 }
 
 .hidden {
-    visibility: hidden;
+    display: none;
 }
 
 .visible {
-    visibility: visible;
+    display: block;
 }
 
 .menu-wrapper {
@@ -32,11 +32,9 @@ html, body {
     margin-right: auto;
     background-color: rgba(255, 255, 255, 0.6);
     display: flex;
-    align-items: center;
+    align-items: inherit;
     justify-content: center;
-}
-
-.about-menu-wrapper {
+    overflow: auto;
 }
 
 .object {
@@ -49,6 +47,12 @@ html, body {
 
 .lower-text-wrapper {
     margin: 2px;
+}
+
+@media (min-width: 361px) {
+    .menu-wrapper {
+        align-items: center;
+    }
 }
 
 @media (min-width: 768px) {
@@ -66,6 +70,7 @@ html, body {
         width: 40%;
     }
 }
+
 /*
 Extra small <576px
 Small ≥576px

@@ -21,13 +21,6 @@
     cursor: pointer;
 }
 
-.back-arrow {
-    position: fixed;
-    width: 5%;
-    left: 0px;
-    bottom: 0px;
-}
-
 .container-character{
     height: 65%;
     display: block;
