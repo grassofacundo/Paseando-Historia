@@ -9,7 +9,7 @@ test("plays arg1810 from the eras page to 100%", async ({ page }) => {
   const dialog = page.getByRole("dialog");
   await expect(dialog).toBeVisible();
   await expect(dialog.getByText(eraChoices[0].text, { exact: true })).toBeVisible();
-  await dialog.getByRole("link", { name: "Comenzar" }).click();
+  await dialog.getByRole("link", { name: "Comenzar" }).first().click();
   await expect(page).toHaveURL(/\/play\/arg1810$/);
   await page.getByRole("button", { name: "Comenzar" }).click();
   await expectScreen(page, arg1810.screens[0]);

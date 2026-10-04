@@ -22,6 +22,9 @@ export const backgrounds = {
   "miercoles-23": "/images/backgrounds/miercoles-23.svg",
   "jueves-24": "/images/backgrounds/jueves-24.svg",
   "viernes-25": "/images/backgrounds/viernes-25.svg",
+  "plaza-victoria": "/images/backgrounds/plaza-victoria.svg",
+  pulperia: "/images/backgrounds/pulperia.svg",
+  fuerte: "/images/backgrounds/fuerte.svg",
   error404: "/images/backgrounds/error404.svg",
 } as const;
 
@@ -36,6 +39,11 @@ export const characters = {
   saavedra: "/images/characters/saavedra.svg",
   profe: "/images/characters/profe.svg",
   "profe-ayuda": "/images/characters/profe-ayuda.svg",
+  cisneros: "/images/characters/cisneros.svg",
+  villota: "/images/characters/villota.svg",
+  french: "/images/characters/french.svg",
+  beruti: "/images/characters/beruti.svg",
+  vecino: "/images/characters/vecino.svg",
   "raul-404": "/images/characters/raul-404.svg",
 } as const;
 

@@ -11,7 +11,7 @@
  * are scanned for the /_next/static/ URLs they reference (scripts, CSS, route
  * chunks) and those are cached too; anything else is cached at runtime.
  */
-const CACHE_VERSION = "ph-v2";
+const CACHE_VERSION = "ph-v3";
 
 const PRECACHE = [
   "/",
@@ -19,8 +19,12 @@ const PRECACHE = [
   "/about",
   "/play/intro",
   "/play/arg1810",
+  "/play/pueblo",
+  "/play/realista",
   "/finish/intro",
   "/finish/arg1810",
+  "/finish/pueblo",
+  "/finish/realista",
   "/404",
   "/manifest.webmanifest",
   "/icons/apple-touch-icon.png",
@@ -41,10 +45,18 @@ const PRECACHE = [
   "/images/backgrounds/martes-22.svg",
   "/images/backgrounds/miercoles-23.svg",
   "/images/backgrounds/oficina-lezica.svg",
+  "/images/backgrounds/plaza-victoria.svg",
+  "/images/backgrounds/pulperia.svg",
+  "/images/backgrounds/fuerte.svg",
   "/images/backgrounds/sabado-19.svg",
   "/images/backgrounds/viernes-18.svg",
   "/images/backgrounds/viernes-25.svg",
   "/images/characters/belgrano.svg",
+  "/images/characters/beruti.svg",
+  "/images/characters/cisneros.svg",
+  "/images/characters/french.svg",
+  "/images/characters/vecino.svg",
+  "/images/characters/villota.svg",
   "/images/characters/castelli.svg",
   "/images/characters/donado.svg",
   "/images/characters/lezica.svg",

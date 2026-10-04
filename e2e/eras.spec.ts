@@ -1,7 +1,7 @@
 import { expect, test } from "@playwright/test";
 
 test.describe("eras", () => {
-  test("disabled eras and choices cannot be used", async ({ page }) => {
+  test("disabled eras cannot be used", async ({ page }) => {
     await page.goto("/eras");
     for (const name of ["Revolución industrial", "Segunda Guerra Mundial"]) {
       const card = page.getByRole("button", { name: new RegExp(name) });
@@ -14,14 +14,8 @@ test.describe("eras", () => {
     await page.getByRole("button", { name: /Revolución de Mayo/ }).click();
     const dialog = page.getByRole("dialog");
     await expect(dialog).toBeVisible();
-    const soon = dialog.getByRole("button", { name: "Proximamente" });
-    await expect(soon).toHaveCount(2);
-    for (const b of await soon.all()) {
-      await expect(b).toBeDisabled();
-      await b.click({ force: true });
-    }
-    await expect(page).toHaveURL(/\/eras$/);
-    await expect(dialog.getByRole("link", { name: "Comenzar" })).toHaveCount(1);
+    await expect(dialog.getByRole("button", { name: "Proximamente" })).toHaveCount(0);
+    await expect(dialog.getByRole("link", { name: "Comenzar" })).toHaveCount(3);
   });
 
   test("modal opens, closes on Escape and on outside click", async ({ page }) => {

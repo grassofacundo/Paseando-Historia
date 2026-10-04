@@ -33,7 +33,7 @@ export type QuestionScreen = ScreenBase & {
 
 export type Screen = DialogueScreen | QuestionScreen;
 
-export type ChapterId = "intro" | "arg1810";
+export type ChapterId = "intro" | "arg1810" | "pueblo" | "realista";
 
 export type Chapter = {
   id: ChapterId;

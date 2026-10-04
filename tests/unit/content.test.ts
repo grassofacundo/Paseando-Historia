@@ -7,6 +7,8 @@ import type { Option, QuestionScreen } from "@/content/types";
 const expected = {
   intro: { screens: 17, questions: 2 },
   arg1810: { screens: 76, questions: 14 },
+  pueblo: { screens: 53, questions: 14 },
+  realista: { screens: 47, questions: 14 },
 } as const;
 
 const questionsOf = (id: keyof typeof expected) =>
@@ -15,8 +17,8 @@ const questionsOf = (id: keyof typeof expected) =>
 const optionsOf = (q: QuestionScreen): Option[] => [q.correct, ...q.distractors];
 
 describe("registry", () => {
-  it("lists both chapters", () => {
-    expect([...chapterIds].sort()).toEqual(["arg1810", "intro"]);
+  it("lists all chapters", () => {
+    expect([...chapterIds].sort()).toEqual(["arg1810", "intro", "pueblo", "realista"]);
     expect(isChapterId("intro")).toBe(true);
     expect(isChapterId("nope")).toBe(false);
     expect(isChapterId("toString")).toBe(false);
@@ -27,6 +29,8 @@ describe("registry", () => {
   it("uses the accent colours from the plan", () => {
     expect(chapters.intro.accentColor).toBe("rgba(40, 167, 69, 0.6)");
     expect(chapters.arg1810.accentColor).toBe("rgba(184, 73, 15, 0.6)");
+    expect(chapters.pueblo.accentColor).toBe("rgba(46, 158, 147, 0.6)");
+    expect(chapters.realista.accentColor).toBe("rgba(61, 158, 46, 0.6)");
   });
 });
 
@@ -160,7 +164,7 @@ describe("verbatim spot-checks", () => {
 });
 
 describe("eras", () => {
-  it("has 3 era cards, only arg1810 playable", () => {
+  it("has 3 era cards, only the first playable", () => {
     expect(eras.map((e) => e.title)).toEqual([
       "Revolución de Mayo",
       "Revolución industrial",
@@ -169,14 +173,11 @@ describe("eras", () => {
     expect(eras.map((e) => e.playable)).toEqual([true, false, false]);
   });
 
-  it("has 3 modal choices, only the first playable", () => {
+  it("has 3 modal choices, all playable", () => {
     expect(eraChoices).toHaveLength(3);
-    expect(eraChoices.map((c) => c.playable)).toEqual([true, false, false]);
-    expect(eraChoices.map((c) => c.buttonLabel)).toEqual([
-      "Comenzar",
-      "Proximamente",
-      "Proximamente",
-    ]);
+    expect(eraChoices.map((c) => c.playable)).toEqual([true, true, true]);
+    expect(eraChoices.map((c) => c.buttonLabel)).toEqual(["Comenzar", "Comenzar", "Comenzar"]);
+    expect(eraChoices.map((c) => c.chapterId)).toEqual(["arg1810", "pueblo", "realista"]);
     expect(eraChoices[1].text).toContain('el "populacho" también');
     expect(eraChoices[0].chapterId).toBe("arg1810");
   });
