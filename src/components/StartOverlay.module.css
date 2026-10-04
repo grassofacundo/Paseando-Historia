@@ -8,20 +8,20 @@
   justify-content: center;
   gap: 1rem;
   border: 0;
-  background: rgba(0, 0, 0, 0.85);
-  color: #fff;
+  background: var(--overlay);
+  color: var(--text-on-dark);
   font: inherit;
   cursor: pointer;
 }
 
 .book {
-  width: min(50vw, 240px);
-  height: auto;
+  width: auto;
+  height: min(200px, 40vh);
   animation: float 2s ease-in-out infinite;
 }
 
 .label {
-  font-size: 2rem;
+  font-size: 1.875rem;
 }
 
 @keyframes float {
@@ -33,5 +33,15 @@
 @media (prefers-reduced-motion: reduce) {
   .book {
     animation: none;
+  }
+}
+
+@media (max-height: 500px) {
+  .overlay {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+  .book {
+    height: min(120px, 45vh);
   }
 }

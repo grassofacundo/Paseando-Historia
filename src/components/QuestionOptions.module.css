@@ -1,23 +1,47 @@
 .options {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 0.5rem;
   margin-top: 0.75rem;
 }
 
 .option {
   min-height: 2.75rem;
-  padding: 0.5rem 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  padding: 0.5rem 0.75rem;
+  border: 0;
   border-radius: 0.5rem;
-  background: rgba(0, 0, 0, 0.35);
-  color: #fff;
+  background: var(--button-option);
+  color: var(--text);
   font: inherit;
-  text-align: left;
+  font-weight: 500;
+  line-height: 1.3;
+  text-align: center;
+  text-shadow: none;
   cursor: pointer;
 }
 
-.option:hover,
+.option:hover {
+  filter: brightness(0.9);
+}
+
 .option:focus-visible {
-  background: rgba(255, 255, 255, 0.25);
+  outline: 3px solid #fff;
+  outline-offset: 2px;
+}
+
+@media (min-width: 600px) {
+  .options {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
+  }
+}
+
+@media (max-height: 500px) {
+  .options {
+    margin-top: 0.4rem;
+    gap: 0.4rem;
+  }
+  .option {
+    padding: 0.35rem 0.5rem;
+  }
 }

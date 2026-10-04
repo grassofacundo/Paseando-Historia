@@ -16,7 +16,7 @@ import { StartOverlay } from "./StartOverlay";
 import { TeacherHelp } from "./TeacherHelp";
 import styles from "./Game.module.css";
 
-const HELP_COLOR = "rgba(0, 123, 255, 0.6)";
+const HELP_COLOR = "var(--accent-help)";
 const noopSubscribe = () => () => {};
 
 /** Reads the resume index on the client only; renders a stable placeholder on the server. */
@@ -64,23 +64,29 @@ function GameInner({ chapter, startIndex }: { chapter: Chapter; startIndex: numb
         <StartOverlay onStart={start} />
       ) : (
         <>
-          {inHelp ? (
-            <TeacherHelp />
-          ) : (
-            screen.character && <CharacterSprite character={screen.character} />
-          )}
-          <NameTag
-            name={inHelp ? "Profe" : screen.speaker}
-            side={inHelp ? "right" : "left"}
-            color={color}
-          />
-          <DialogueBox
-            color={color}
-            text={inHelp ? (selected?.help ?? "") : screen.text}
-            onClick={inHelp ? dismissHelp : isQuestion ? undefined : advance}
-          >
-            {!inHelp && isQuestion && <QuestionOptions options={options} onChoose={choose} />}
-          </DialogueBox>
+          <div className={styles.stage}>
+            <div className={styles.stageInner}>
+              {inHelp ? (
+                <TeacherHelp />
+              ) : (
+                screen.character && <CharacterSprite character={screen.character} />
+              )}
+              <NameTag
+                name={inHelp ? "Profe" : screen.speaker}
+                side={inHelp ? "right" : "left"}
+                color={color}
+              />
+            </div>
+          </div>
+          <div className={styles.panel}>
+            <DialogueBox
+              color={color}
+              text={inHelp ? (selected?.help ?? "") : screen.text}
+              onClick={inHelp ? dismissHelp : isQuestion ? undefined : advance}
+            >
+              {!inHelp && isQuestion && <QuestionOptions options={options} onChoose={choose} />}
+            </DialogueBox>
+          </div>
         </>
       )}
     </div>

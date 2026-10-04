@@ -1,53 +1,95 @@
 .root {
   position: fixed;
   inset: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: 100dvh;
   overflow: hidden;
-  background-color: #222;
+  background-color: var(--stage-bg);
   background-size: cover;
   background-position: center;
 }
 
+.stage {
+  position: relative;
+  flex: 1 1 0;
+  min-height: 0;
+}
+
+.stageInner {
+  position: relative;
+  width: min(100%, 70rem);
+  height: 100%;
+  margin: 0 auto;
+}
+
 .sprite {
   position: absolute;
-  left: 50%;
+  left: 2%;
   bottom: 0;
-  height: min(80vh, 135vw);
   width: auto;
-  max-width: 90vw;
-  transform: translateX(-50%);
+  height: 100%;
+  max-width: 60%;
+  max-height: 40rem;
+  object-fit: contain;
+  object-position: left bottom;
 }
 
 .tag,
 .box {
-  position: absolute;
-  z-index: 2;
-  color: #fff;
-  background: rgba(184, 73, 15, 0.6);
-  font-size: clamp(1rem, 2.4vw, 1.4rem);
+  color: var(--text-on-dark);
+  background: var(--accent-arg1810);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
 
 .tag {
-  left: max(4vw, calc(50vw - 30rem));
-  bottom: calc(1rem + 7rem);
-  padding: 0.4rem 1.2rem;
+  position: absolute;
+  left: 0.5rem;
+  bottom: 0.25rem;
+  z-index: 2;
+  padding: 0.3rem 1rem;
   border-radius: 0.5rem;
+  font-size: clamp(0.95rem, 0.8rem + 0.6vw, 1.3rem);
   font-weight: 700;
 }
 
+.panel {
+  flex: none;
+  padding: 0 0.5rem calc(0.5rem + env(safe-area-inset-bottom, 0px));
+}
+
 .box {
-  left: 50%;
-  bottom: 1rem;
-  width: min(92vw, 60rem);
-  transform: translateX(-50%);
-  padding: 1rem 1.25rem;
+  width: min(100%, 60rem);
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
   border-radius: 0.75rem;
+  font-size: clamp(0.95rem, 0.8rem + 0.5vw, 1.2rem);
+  text-align: center;
 }
 
 .text {
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.25rem;
 }
 
 .link {
-  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0 0.5rem;
+  color: var(--text-on-dark);
   text-decoration: underline;
+}
+
+@media (min-width: 768px) and (min-height: 600px) {
+  .panel {
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media (max-height: 500px) {
+  .box {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.85rem;
+  }
 }

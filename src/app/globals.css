@@ -1,3 +1,54 @@
+:root {
+  /* Chapter / dialogue accents (legacy dialog-screen.css) */
+  --accent-intro: rgba(40, 167, 69, 0.6);
+  --accent-arg1810: rgba(184, 73, 15, 0.6);
+  --accent-help: rgba(0, 123, 255, 0.6);
+
+  /* Text */
+  --text: #000;
+  --text-on-dark: #fff;
+  --text-muted: #555;
+  --progress: #99dc1a;
+  --focus: #0b5fff;
+
+  /* Surfaces */
+  --page-bg: #e9dcc3;
+  --panel-bg: rgba(255, 255, 255, 0.6);
+  --panel-hover: rgba(211, 158, 0, 0.2);
+  --card-hover: rgba(0, 0, 0, 0.32);
+  --stage-bg: #222;
+  --overlay: rgba(0, 0, 0, 0.8);
+  --modal-bg: #fff;
+  --modal-pic-bg: #412c1d;
+  --modal-text-bg: burlywood;
+
+  /* Buttons (legacy: tomato option buttons, orange-brown call to action) */
+  --button-option: tomato;
+  --button-primary: #b8490f;
+  --button-primary-hover: #983b0a;
+  --button-disabled: #999;
+  --border: rgba(0, 0, 0, 0.35);
+
+  /* Width of the translucent column used by menu/finish/about (legacy: 100/70/50/40%) */
+  --panel-width: 100%;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --panel-width: 70%;
+  }
+}
+@media (min-width: 992px) {
+  :root {
+    --panel-width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  :root {
+    --panel-width: 40%;
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -11,6 +62,31 @@ body {
   min-height: 100%;
 }
 
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 body {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+  background: linear-gradient(160deg, #f3e9d2 0%, var(--page-bg) 45%, #cdb68a 100%) fixed;
+}
+
+img {
+  max-width: 100%;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+button,
+a {
+  touch-action: manipulation;
 }
