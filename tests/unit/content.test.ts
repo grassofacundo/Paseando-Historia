@@ -9,6 +9,8 @@ const expected = {
   arg1810: { screens: 76, questions: 14 },
   pueblo: { screens: 53, questions: 14 },
   realista: { screens: 47, questions: 14 },
+  industrial: { screens: 45, questions: 13 },
+  guerra: { screens: 50, questions: 14 },
 } as const;
 
 const questionsOf = (id: keyof typeof expected) =>
@@ -18,7 +20,7 @@ const optionsOf = (q: QuestionScreen): Option[] => [q.correct, ...q.distractors]
 
 describe("registry", () => {
   it("lists all chapters", () => {
-    expect([...chapterIds].sort()).toEqual(["arg1810", "intro", "pueblo", "realista"]);
+    expect([...chapterIds].sort()).toEqual(["arg1810", "guerra", "industrial", "intro", "pueblo", "realista"]);
     expect(isChapterId("intro")).toBe(true);
     expect(isChapterId("nope")).toBe(false);
     expect(isChapterId("toString")).toBe(false);
@@ -31,6 +33,10 @@ describe("registry", () => {
     expect(chapters.arg1810.accentColor).toBe("rgba(184, 73, 15, 0.6)");
     expect(chapters.pueblo.accentColor).toBe("rgba(46, 158, 147, 0.6)");
     expect(chapters.realista.accentColor).toBe("rgba(61, 158, 46, 0.6)");
+    expect(chapters.industrial.accentColor).toBe("rgba(96, 110, 128, 0.6)");
+    expect(chapters.guerra.accentColor).toBe("rgba(139, 40, 40, 0.6)");
+    expect(chapters.industrial.accentColor).toBe("rgba(96, 110, 128, 0.6)");
+    expect(chapters.guerra.accentColor).toBe("rgba(139, 40, 40, 0.6)");
   });
 });
 
@@ -164,20 +170,25 @@ describe("verbatim spot-checks", () => {
 });
 
 describe("eras", () => {
-  it("has 3 era cards, only the first playable", () => {
+  it("has 3 era cards, all playable", () => {
     expect(eras.map((e) => e.title)).toEqual([
       "Revolución de Mayo",
       "Revolución industrial",
       "Segunda Guerra Mundial",
     ]);
-    expect(eras.map((e) => e.playable)).toEqual([true, false, false]);
+    expect(eras.map((e) => e.playable)).toEqual([true, true, true]);
   });
 
-  it("has 3 modal choices, all playable", () => {
-    expect(eraChoices).toHaveLength(3);
-    expect(eraChoices.map((c) => c.playable)).toEqual([true, true, true]);
-    expect(eraChoices.map((c) => c.buttonLabel)).toEqual(["Comenzar", "Comenzar", "Comenzar"]);
-    expect(eraChoices.map((c) => c.chapterId)).toEqual(["arg1810", "pueblo", "realista"]);
+  it("has 5 modal choices, all playable", () => {
+    expect(eraChoices).toHaveLength(5);
+    expect(eraChoices.every((c) => c.playable && c.buttonLabel === "Comenzar")).toBe(true);
+    expect(eraChoices.map((c) => c.chapterId)).toEqual([
+      "arg1810",
+      "pueblo",
+      "realista",
+      "industrial",
+      "guerra",
+    ]);
     expect(eraChoices[1].text).toContain('el "populacho" también');
     expect(eraChoices[0].chapterId).toBe("arg1810");
   });

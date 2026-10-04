@@ -33,7 +33,7 @@ export type QuestionScreen = ScreenBase & {
 
 export type Screen = DialogueScreen | QuestionScreen;
 
-export type ChapterId = "intro" | "arg1810" | "pueblo" | "realista";
+export type ChapterId = "intro" | "arg1810" | "pueblo" | "realista" | "industrial" | "guerra";
 
 export type Chapter = {
   id: ChapterId;
@@ -58,6 +58,8 @@ export type Era = {
 /** A character choice in the era modal. */
 export type EraChoice = {
   id: string;
+  /** Era whose modal shows this choice. */
+  eraId: string;
   image: ChoiceImageId;
   text: string;
   buttonLabel: string;

@@ -1,21 +1,23 @@
 import { expect, test } from "@playwright/test";
 
 test.describe("eras", () => {
-  test("disabled eras cannot be used", async ({ page }) => {
+  test("each era opens its own modal with its choices", async ({ page }) => {
     await page.goto("/eras");
-    for (const name of ["Revolución industrial", "Segunda Guerra Mundial"]) {
-      const card = page.getByRole("button", { name: new RegExp(name) });
-      await expect(card).toBeDisabled();
-      await expect(card).toContainText("Proximamente");
-      await card.click({ force: true });
-      await expect(page.getByRole("dialog")).toHaveCount(0);
+    const expected = [
+      { era: /Revolución de Mayo/, title: "Revolución de Mayo", links: 3 },
+      { era: /Revolución industrial/, title: "Revolución industrial", links: 1 },
+      { era: /Segunda Guerra Mundial/, title: "Segunda Guerra Mundial", links: 1 },
+    ];
+    for (const { era, title, links } of expected) {
+      const card = page.getByRole("button", { name: era });
+      await expect(card).toBeEnabled();
+      await card.click();
+      const dialog = page.getByRole("dialog");
+      await expect(dialog.getByRole("heading", { name: title })).toBeVisible();
+      await expect(dialog.getByRole("link", { name: "Comenzar" })).toHaveCount(links);
+      await page.keyboard.press("Escape");
+      await expect(dialog).toHaveCount(0);
     }
-
-    await page.getByRole("button", { name: /Revolución de Mayo/ }).click();
-    const dialog = page.getByRole("dialog");
-    await expect(dialog).toBeVisible();
-    await expect(dialog.getByRole("button", { name: "Proximamente" })).toHaveCount(0);
-    await expect(dialog.getByRole("link", { name: "Comenzar" })).toHaveCount(3);
   });
 
   test("modal opens, closes on Escape and on outside click", async ({ page }) => {

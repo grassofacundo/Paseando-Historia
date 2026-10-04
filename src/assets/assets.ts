@@ -25,6 +25,20 @@ export const backgrounds = {
   "plaza-victoria": "/images/backgrounds/plaza-victoria.svg",
   pulperia: "/images/backgrounds/pulperia.svg",
   fuerte: "/images/backgrounds/fuerte.svg",
+  "taller-rural": "/images/backgrounds/taller-rural.svg",
+  "fabrica-textil": "/images/backgrounds/fabrica-textil.svg",
+  "mina-carbon": "/images/backgrounds/mina-carbon.svg",
+  "calle-manchester": "/images/backgrounds/calle-manchester.svg",
+  "estacion-tren": "/images/backgrounds/estacion-tren.svg",
+  redaccion: "/images/backgrounds/redaccion.svg",
+  "polonia-1939": "/images/backgrounds/polonia-1939.svg",
+  "londres-1940": "/images/backgrounds/londres-1940.svg",
+  "frente-ruso": "/images/backgrounds/frente-ruso.svg",
+  "pearl-harbor": "/images/backgrounds/pearl-harbor.svg",
+  normandia: "/images/backgrounds/normandia.svg",
+  "berlin-1945": "/images/backgrounds/berlin-1945.svg",
+  hiroshima: "/images/backgrounds/hiroshima.svg",
+  "buenos-aires-1945": "/images/backgrounds/buenos-aires-1945.svg",
   error404: "/images/backgrounds/error404.svg",
 } as const;
 
@@ -44,12 +58,24 @@ export const characters = {
   french: "/images/characters/french.svg",
   beruti: "/images/characters/beruti.svg",
   vecino: "/images/characters/vecino.svg",
+  obrero: "/images/characters/obrero.svg",
+  watt: "/images/characters/watt.svg",
+  arkwright: "/images/characters/arkwright.svg",
+  stephenson: "/images/characters/stephenson.svg",
+  engels: "/images/characters/engels.svg",
+  owen: "/images/characters/owen.svg",
+  corresponsal: "/images/characters/corresponsal.svg",
+  churchill: "/images/characters/churchill.svg",
+  roosevelt: "/images/characters/roosevelt.svg",
+  eisenhower: "/images/characters/eisenhower.svg",
   "raul-404": "/images/characters/raul-404.svg",
 } as const;
 
 export const objects = {
   escarapela: "/images/objects/escarapela.svg",
   book: "/images/objects/book.svg",
+  engranaje: "/images/objects/engranaje.svg",
+  paloma: "/images/objects/paloma.svg",
 } as const;
 
 export const icons = {
@@ -69,6 +95,8 @@ export const choices = {
   "eleccion-politico": "/images/choices/eleccion-politico.svg",
   "eleccion-pueblo": "/images/choices/eleccion-pueblo.svg",
   "eleccion-realista": "/images/choices/eleccion-realista.svg",
+  "eleccion-obrero": "/images/choices/eleccion-obrero.svg",
+  "eleccion-corresponsal": "/images/choices/eleccion-corresponsal.svg",
 } as const;
 
 export type BackgroundId = keyof typeof backgrounds;

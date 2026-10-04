@@ -161,7 +161,7 @@ export const realista: Chapter = {
       type: "dialogue",
       character: "saavedra",
       speaker: "Cornelio Saavedra",
-      text: "Excelencia, con todo respeto: no puedo asegurarle que la tropa lo siga si se la usa contra el pueblo",
+      text: "Excelencia, España ya no existe como poder unido: hemos resuelto reasumir nuestros derechos y conservarnos por nosotros mismos",
       background: "fuerte",
     },
     {
@@ -259,7 +259,7 @@ export const realista: Chapter = {
       type: "dialogue",
       character: "paso",
       speaker: "Juan José Paso",
-      text: "Respeto al fiscal, pero hay que actuar ya. Buenos Aires puede obrar en nombre de los demás pueblos, y ellos luego aprobarán lo que se decida",
+      text: "Respeto al fiscal, pero hay que actuar ya, con Napoleón avanzando. Buenos Aires, como hermana mayor, debe obrar primero y luego invitar a los demás pueblos",
       background: "cabildo-abierto",
     },
     {
@@ -268,9 +268,9 @@ export const realista: Chapter = {
       speaker: "Juan José Paso",
       text: "¿Qué respondió Juan José Paso al fiscal Villota?",
       background: "cabildo-abierto",
-      correct: { id: "realista-q29-correct", text: "Que Buenos Aires actuara como gestora de los demás pueblos, que luego ratificarían lo decidido", help: "Sí! Esa idea, conocida como \"gestión de negocios\", fue un argumento clave para el bando criollo" },
+      correct: { id: "realista-q29-correct", text: "Que Buenos Aires actuara primero, como \"hermana mayor\", e invitara después a los demás pueblos a sumarse", help: "Sí! Se la conoce como el argumento de la \"hermana mayor\" y fue clave para el bando criollo" },
       distractors: [
-        { id: "realista-q29-d1", text: "Que se ignorara a las demás ciudades para siempre", help: "No, justamente propuso que ellas aprobaran después" },
+        { id: "realista-q29-d1", text: "Que se ignorara a las demás ciudades para siempre", help: "No, justamente propuso invitarlas a participar después" },
         { id: "realista-q29-d2", text: "Que se declarara la guerra a Montevideo", help: "No, no era un tema de ese día" },
         { id: "realista-q29-d3", text: "Que se pidiera permiso a Napoleón", help: "No no, jamás" },
         { id: "realista-q29-d4", text: "Que se disolviera el Cabildo", help: "No, el Cabildo era el lugar donde se debatía" },

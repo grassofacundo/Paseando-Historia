@@ -43,8 +43,8 @@ describe("service worker precache list", () => {
   it("covers the app pages and manifest", () => {
     for (const p of [
       "/", "/eras", "/about", "/play/intro", "/play/arg1810",
-      "/play/pueblo", "/play/realista",
-      "/finish/intro", "/finish/arg1810", "/finish/pueblo", "/finish/realista", "/404", "/manifest.webmanifest",
+      "/play/pueblo", "/play/realista", "/play/industrial", "/play/guerra",
+      "/finish/intro", "/finish/arg1810", "/finish/pueblo", "/finish/realista", "/finish/industrial", "/finish/guerra", "/404", "/manifest.webmanifest",
     ]) {
       expect(precache, p).toContain(p);
     }

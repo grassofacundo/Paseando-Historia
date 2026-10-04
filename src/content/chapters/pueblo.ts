@@ -91,7 +91,7 @@ export const pueblo: Chapter = {
       type: "dialogue",
       character: "french",
       speaker: "Domingo French",
-      text: "Buen día, soy Domingo French. Junto con mi amigo Antonio Beruti andamos juntando gente decidida: jóvenes, artesanos, milicianos. A algunos les dicen \"chisperos\"",
+      text: "Buen día, soy Domingo French. Junto con mi amigo Antonio Beruti andamos juntando gente decidida: jóvenes, artesanos, milicianos. Los realistas nos llaman \"chisperos\" o \"infernales\"",
       background: "plaza-victoria",
     },
     {
@@ -392,7 +392,7 @@ export const pueblo: Chapter = {
       type: "dialogue",
       character: "vecino",
       speaker: "Vecino del barrio",
-      text: "Mire, French y Beruti andan repartiendo cintas entre la gente",
+      text: "Mire, French y Beruti andan repartiendo cintas distintivas entre la gente",
       background: "plaza-victoria",
     },
     {
@@ -401,7 +401,7 @@ export const pueblo: Chapter = {
       speaker: "Vecino del barrio",
       text: "¿Qué repartían French y Beruti entre la gente, según la tradición?",
       background: "plaza-victoria",
-      correct: { id: "pueblo-q45-correct", text: "Cintas celestes y blancas para identificar a los partidarios del cambio", help: "Exacto! Según la tradición esos colores quedaron como símbolo de la revolución. La escarapela nacional se creó oficialmente recién en 1812" },
+      correct: { id: "pueblo-q45-correct", text: "Cintas distintivas para reconocer a los partidarios del cambio, que según la tradición eran celestes y blancas", help: "Exacto! Los historiadores discuten de qué colores eran (Mitre se basó en la tradición oral), pero sí usaron distintivos. La escarapela nacional se creó oficialmente recién en 1812" },
       distractors: [
         { id: "pueblo-q45-d1", text: "Banderas rojas y amarillas, los colores de España", help: "No, justamente querían diferenciarse de los símbolos de la Corona" },
         { id: "pueblo-q45-d2", text: "Cintas negras en señal de luto", help: "No, no eran de luto, eran de esperanza" },
@@ -469,7 +469,7 @@ export const pueblo: Chapter = {
       type: "dialogue",
       character: "french",
       speaker: "Domingo French",
-      text: "Gracias por acompañarnos en estos días. Tome esta cinta celeste y blanca como recuerdo, la va a necesitar para armar su escarapela",
+      text: "Gracias por acompañarnos en estos días. Tome esta cinta como recuerdo, la va a necesitar para armar su escarapela",
       background: "plaza-victoria",
     },
     {

@@ -5,11 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { choices } from "@/assets/assets";
 import { eraChoices } from "@/content/eras";
+import type { Era } from "@/content/types";
 import styles from "./EraModal.module.css";
 
 const FOCUSABLE = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
 
-export function EraModal({ onClose }: { onClose: () => void }) {
+export function EraModal({ era, onClose }: { era: Era; onClose: () => void }) {
   const dialogRef = useRef<HTMLDivElement>(null);
 
   // Move focus in on open, restore it to the previously focused element on close.
@@ -60,10 +61,10 @@ export function EraModal({ onClose }: { onClose: () => void }) {
         onKeyDown={onKeyDown}
       >
         <h2 id="era-modal-title" className={styles.heading}>
-          Revolución de Mayo
+          {era.title}
         </h2>
         <div className={styles.choices}>
-          {eraChoices.map((choice) => (
+          {eraChoices.filter((choice) => choice.eraId === era.id).map((choice) => (
             <div key={choice.id} className={styles.choice}>
               <Image
                 src={choices[choice.image]}

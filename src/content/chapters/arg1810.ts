@@ -455,7 +455,7 @@ export const arg1810: Chapter = {
       type: "dialogue",
       character: "belgrano",
       speaker: "Manuel Belgrano",
-      text: "Bueno señores, la votación salió 159 a 67, triunfó la opción que exigía la deposición del virrey",
+      text: "Bueno señores, la votación salió 155 a 69, triunfó la opción que exigía la deposición del virrey",
       background: "cabildo-abierto",
     },
     {
