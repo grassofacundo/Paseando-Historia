@@ -1,0 +1,9 @@
+.root {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background-color: #222;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,10 @@
+.teacher {
+  position: absolute;
+  right: 4vw;
+  bottom: 0;
+  z-index: 1;
+  height: min(75vh, 127vw);
+  width: auto;
+  max-width: 80vw;
+  pointer-events: none;
+}

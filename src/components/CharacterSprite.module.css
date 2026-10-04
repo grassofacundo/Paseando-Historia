@@ -1,0 +1,11 @@
+.sprite {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  z-index: 1;
+  height: min(80vh, 135vw);
+  width: auto;
+  max-width: 90vw;
+  transform: translateX(-50%);
+  pointer-events: none;
+}

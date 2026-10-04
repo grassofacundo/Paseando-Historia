@@ -1,0 +1,18 @@
+.tag {
+  position: absolute;
+  bottom: calc(1rem + 9rem);
+  z-index: 11;
+  padding: 0.4rem 1.2rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-size: clamp(1rem, 2.4vw, 1.4rem);
+  font-weight: 700;
+}
+
+.left {
+  left: max(4vw, calc(50vw - 30rem));
+}
+
+.right {
+  right: max(4vw, calc(50vw - 30rem));
+}

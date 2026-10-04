@@ -1,0 +1,23 @@
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.option {
+  min-height: 2.75rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 0.5rem;
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.option:hover,
+.option:focus-visible {
+  background: rgba(255, 255, 255, 0.25);
+}
