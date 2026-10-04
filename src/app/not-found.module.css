@@ -1,0 +1,53 @@
+.root {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background-color: #222;
+  background-size: cover;
+  background-position: center;
+}
+
+.sprite {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  height: min(80vh, 135vw);
+  width: auto;
+  max-width: 90vw;
+  transform: translateX(-50%);
+}
+
+.tag,
+.box {
+  position: absolute;
+  z-index: 2;
+  color: #fff;
+  background: rgba(184, 73, 15, 0.6);
+  font-size: clamp(1rem, 2.4vw, 1.4rem);
+}
+
+.tag {
+  left: max(4vw, calc(50vw - 30rem));
+  bottom: calc(1rem + 7rem);
+  padding: 0.4rem 1.2rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+}
+
+.box {
+  left: 50%;
+  bottom: 1rem;
+  width: min(92vw, 60rem);
+  transform: translateX(-50%);
+  padding: 1rem 1.25rem;
+  border-radius: 0.75rem;
+}
+
+.text {
+  margin: 0 0 0.75rem;
+}
+
+.link {
+  color: #fff;
+  text-decoration: underline;
+}
