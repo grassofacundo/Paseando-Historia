@@ -7,9 +7,11 @@
  * the shell changes so old caches are deleted on activate.
  *
  * Pages are listed as clean URLs (no .html): Vercel and `serve` both do that.
- * Hashed /_next/static/ files cannot be listed, so they are cached at runtime.
+ * Hashed /_next/static/ files cannot be listed, so on install the cached pages
+ * are scanned for the /_next/static/ URLs they reference (scripts, CSS, route
+ * chunks) and those are cached too; anything else is cached at runtime.
  */
-const CACHE_VERSION = "ph-v1";
+const CACHE_VERSION = "ph-v2";
 
 const PRECACHE = [
   "/",
@@ -65,11 +67,33 @@ const PRECACHE = [
   "/images/objects/escarapela.svg",
 ];
 
+// Finds every /_next/static/ URL referenced by the precached pages (including
+// chunk paths in the inline flight data) and caches it.
+async function precacheNextAssets(cache) {
+  const found = new Set();
+  const re = /(?:\/_next\/)?static\/[^"'\\\s<>)(]+\.(?:js|css|woff2?)/g;
+  for (const url of PRECACHE) {
+    if (url.startsWith("/images/") || url.startsWith("/icons/")) continue;
+    try {
+      const res = await cache.match(url);
+      if (!res) continue;
+      const text = await res.text();
+      for (const m of text.matchAll(re)) {
+        found.add(m[0].startsWith("/_next/") ? m[0] : "/_next/" + m[0]);
+      }
+    } catch {
+      // ignore: runtime caching is the fallback
+    }
+  }
+  await Promise.allSettled([...found].map((u) => cache.add(u)));
+}
+
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_VERSION).then((cache) =>
       // One failing URL must not abort the installation.
       Promise.allSettled(PRECACHE.map((url) => cache.add(url)))
+        .then(() => precacheNextAssets(cache))
     ).then(() => self.skipWaiting())
   );
 });

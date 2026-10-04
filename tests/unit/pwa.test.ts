@@ -71,3 +71,10 @@ describe("web app manifest", () => {
     expect(icons.some((i) => i.purpose === "maskable")).toBe(true);
   });
 });
+
+describe("service worker install", () => {
+  it("uses a v2+ cache and precaches referenced Next assets", () => {
+    expect(sw).toMatch(/CACHE_VERSION = "ph-v[2-9]/);
+    expect(sw).toContain("precacheNextAssets");
+  });
+});
