@@ -3,6 +3,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  width: min(100%, 64rem);
   min-height: 100vh;
-  padding: 5rem 1rem 2rem;
+  min-height: 100dvh;
+  margin: 0 auto;
+  padding: 4.5rem 1rem 2rem;
+  background: var(--panel-bg);
 }

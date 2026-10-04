@@ -5,67 +5,119 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
-  overflow-y: auto;
-  background: rgba(0, 0, 0, 0.6);
+  padding: 0.75rem;
+  background: var(--overlay);
 }
 
 .dialog {
+  width: 100%;
   max-width: 64rem;
   max-height: 100%;
   padding: 1rem;
   overflow-y: auto;
-  background: #fff;
+  overscroll-behavior: contain;
+  background: var(--modal-bg);
   border-radius: 0.5rem;
   outline: none;
 }
 
 .heading {
   margin: 0 0 1rem;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   text-align: center;
 }
 
 .choices {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
-  gap: 1rem;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
 }
 
 .choice {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 6rem 1fr;
+  grid-template-areas:
+    "pic text"
+    "pic button";
   align-items: center;
-  gap: 0.75rem;
-  text-align: center;
+  gap: 0.5rem 0.75rem;
+  padding: 0.75rem;
+  background: var(--modal-text-bg);
+  border: 3px solid var(--modal-pic-bg);
+  border-radius: 0.25rem;
 }
 
 .pic {
+  grid-area: pic;
   width: 100%;
-  max-width: 12rem;
   height: auto;
+  background: var(--modal-pic-bg);
   border-radius: 0.25rem;
 }
 
 .text {
-  flex: 1;
+  grid-area: text;
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 .button {
-  display: inline-block;
+  grid-area: button;
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
   padding: 0.5rem 1.25rem;
   font: inherit;
-  color: #fff;
+  font-weight: 600;
+  color: var(--text-on-dark);
   text-decoration: none;
-  background: #b8490f;
+  background: var(--button-primary);
   border: 0;
   border-radius: 0.375rem;
   cursor: pointer;
 }
 
+.button:hover {
+  background: var(--button-primary-hover);
+}
+
 .button:disabled {
-  background: #999;
+  background: var(--button-disabled);
+  color: #eee;
   cursor: not-allowed;
+}
+
+@media (min-width: 768px) {
+  .backdrop {
+    padding: 2rem;
+  }
+  .choices {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .choice {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "pic"
+      "text"
+      "button";
+    justify-items: center;
+    padding: 0;
+    text-align: center;
+  }
+  .pic {
+    max-height: 40vh;
+    object-fit: contain;
+    border-radius: 0;
+  }
+  .text {
+    padding: 0 0.75rem;
+    font-size: 0.95rem;
+  }
+  .button {
+    justify-self: center;
+    margin-bottom: 0.75rem;
+  }
 }

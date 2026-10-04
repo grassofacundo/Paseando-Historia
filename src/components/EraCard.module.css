@@ -1,38 +1,86 @@
 .card {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 5.5rem 1fr;
+  grid-template-areas:
+    "image title"
+    "image status";
+  align-content: center;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.1rem 1rem;
   width: 100%;
+  min-height: 6.5rem;
   padding: 0.75rem;
   font: inherit;
-  color: inherit;
-  background: #fff;
-  border: 1px solid #ccc;
+  color: var(--text);
+  text-align: left;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--border);
   border-radius: 0.5rem;
   cursor: pointer;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.card:enabled:hover {
+  color: var(--text-on-dark);
+  background: var(--card-hover);
 }
 
 .card:disabled {
   cursor: not-allowed;
-  opacity: 0.6;
+  background: rgba(120, 120, 120, 0.25);
+  border-style: dashed;
 }
 
 .image {
+  grid-area: image;
   width: 100%;
   height: auto;
   border-radius: 0.25rem;
 }
 
+.card:disabled .image {
+  filter: grayscale(100%);
+  opacity: 0.55;
+}
+
 .title {
+  grid-area: title;
   font-size: 1.25rem;
   font-weight: 600;
+  line-height: 1.2;
 }
 
 .status {
-  font-size: 0.95rem;
+  grid-area: status;
+  color: #3f7a00;
+  font-weight: 600;
+  font-style: italic;
 }
 
-.card:disabled .status {
-  color: #666;
+.card:enabled:hover .status {
+  color: var(--progress);
+}
+
+.card:disabled .status,
+.card:disabled .title {
+  color: var(--text-muted);
+}
+
+@media (min-width: 768px) {
+  .card {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "image"
+      "status";
+    justify-items: center;
+    gap: 0.5rem;
+    min-height: 15rem;
+    padding: 1rem;
+    text-align: center;
+  }
+  .image {
+    width: 80%;
+    max-width: 12rem;
+  }
 }
